@@ -1,0 +1,277 @@
+Java是一个完整的平台，有一个庞大的库，其中包含了很多可重用的代码和一个提供诸如安全性、跨操作系统的可移植性以及自动垃圾收集等服务的执行环境。
+
+
+1）简单性
+2）面向对象
+3）分布式
+Java有一个丰富的例程库，用于处理像HTTP和FTP之类的TCP/IP协议。Java应用程序能够通过URL打开和访问网络上的对象，其便捷程度就好像访问本地文件一样。
+4）健壮性
+Java投入了大量的精力进行早期的问题检测、后期动态的（运行时）检测，并消除了容易出错的情况……Java和C++最大的不同在于Java采用的指针模型可以消除重写内存和损坏数据的可能性。
+5）安全性
+运行时堆栈溢出。如蠕虫和病毒常用的攻击手段。
+·破坏自己的进程空间之外的内存。
+·未经授权读写文件。
+
+6）体系结构中立
+编译器生成一个体系结构中立的目标文件格式，这是一种编译过的代码，只要有Java运行时系统，这些编译后的代码可以在许多处理器上运行。Java编译器通过生成与特定的计算机体系结构无关的字节码指令来实现这一特性。精心设计的字节码不仅可以很容易地在任何机器上解释执行，而且还可以动态地翻译成本地机器代码。
+7）可移植性
+8）解释型
+Java解释器可以在任何移植了解释器的机器上执行Java字节码。由于链接是一个增量式且轻量级的过程，所以，开发过程也变得更加快捷，更加具有探索性。
+
+9）高性能
+10）多线程
+11）动态性
+
+3.4.2 常量
+在Java中，利用关键字final指示常量，
+可以使用关键字staticfina丨设置一个类常量
+需要注意，类常量的定义位于maiii方法的外部。因此，在同一个类的其他方法中也可以使用这个常量。而且，如果一个常量被声明为public，那么其他类的方法也可以使用这个量。
+如果将一个类标记为strictfp,这个类中的所有方法都要使用严格的浮点计算。
+
+3.5.3 强制类型转换
+    需要通过强制类型转换（cast)实现这个操作。强制类型转换的语法格式是在圆括号中给出想要转换的目标类型，后面紧跟待转换的变量名
+
+
+3.6 字符串 
+    Java没有内置的字符串类型，而是在标准Java类库中提供了一个预定义类，很自然地叫做String。每个用双引号括起来的字符串都是String类的一个实例
+
+3 . 6.1子串
+    Stringgreeting="Hello";
+    Strings=greeting.substring®,3);
+    创建了一个由字符“Hel”组成的字符串。
+
+3.6.2拼接
+    Java语言允许使用+号连接（拼接）两个字符串，
+    当将一个字符串与一个非字符串的值进行拼接时，后者被转换成字符串。
+    如果需要把多个字符串放在一起，用一个定界符分隔，可以使用静态join方法：
+    Stringall=String.join("/","S","M","L","XL");
+    如何修改这个字符串呢？在Java中实现这项操作非常容易。首先提取需要的字符，然后再拼接上替换的字符串：
+    greeting=greeting.substring(0,3)+"p!";
+    上面这条语句将greeting当前值修改为“Help!”
+
+3.6.3不可变字符串
+    以想象将各种字符串存放在公共的存储池中。字符串变量指向存储池中相应的位置。如果复制一个字符串变量，原始字符串与复制的字符串共享相同的字符。
+    总而言之，Java的设计者认为共享带来的高效率远远胜过于提取、拼接字符串所带来的低效率。查看一下程序会发现：很少需要修改字符串，而是往往需要对字符串进行比较（有一种例外情况，将来自于文件或键盘的单个字符或较短的字符串汇集成字符串。为此，Java提供了一个独立的类
+
+3.6.4 检测字符串是否相等
+    可以使用equals方法检测两个字符串是否相等。对于表达式：
+    s.equals(t)；如果字符串s与字符串t相等，则返回true;否则，返回false。
+    也可以是字符串字面量。例如，下列表达式是合法的："Hello".equals(greeting)要想检测两个字符串是否相等，而不区分大小写，可以使用equalsIgnoreCase方法。"Hello".equalsIgnoreCase("hel1o")
+
+    如果虚拟机始终将相同的字符串共享，就可以使用=运算符检测是否相等。但实际上只有字符串常量是共享的，而+或substring等操作产生的结果并不是共享的。因此，千万不要使甩==运算符测试字符串的相等性，以免在程序中出现糟糕的bug。从表面上看，这种bug很像随机产生的间歇性错误。
+
+3 . 6.5空 串 与Null串
+    空串""是长度为0的字符串 
+    if(str.lengthQ=0) 或 if(str.equals(""))；
+    String变量还可以存放一个特殊的值，名为null,这表示目前没有任何对象与该变量关联
+
+如果想要遍历一个字符串，并且依次査看每一个码点，可以使用下列语句：
+    intcp=sentence.codePointAt(i);
+    if(Character.isSupplementaryCodePoint(cp))i+=2;elsei++;
+可以使用下列语句实现回退操作：i；
+    if(CharacterssSurrogate(sentence.charAt(i)))i;
+    intcp=sentence.codePointAt(i);
+显然，这很麻烦。更容易的办法是使用codePoints方法，它会生成一个int值的“流”，每个int值对应一个码点。（流将在卷II的第2章中讨论〉可以将它转换为一个数组（见3.10节)，再完成遍历。
+    intDcodePoints=str.codePointsO.toArrayO；
+
+反之，要把一个码点数组转换为一个字符串，可以使用构造函数（我们将在第4章详细讨论构造函数和new操作符)。
+    Stringstr=newString(codePoints,0,codePoints.length)
+
+charcharAt(intindex)
+返回给定位置的代码单元。除非对底层的代码单元感兴趣，否则不需要调用这个方法。•intcodePointAt(intIndex)
+5.0返回从给定位置开始的码点。
+•intoffsetByCodePoints(intstartlndex,intcpCount)5.0
+返回从startlndex代码点开始，位移cpCount后的码点索引。
+•i n tcompareTo(Stringother)按照字典顺序，如果字符串位于other之前，返回一个负数；如果字符串位于other之后，返回一个正数；如果两个字符串相等，返回0。•IntStreamcodePoints()8
+将这个字符串的码点作为一个流返回。调用toArray将它们放在一个数组中。•newString(int[]codePoints,intoffset,intcount)5.0
+用数组中从offset开始的count个码点构造一个字符串。
+•booleanequals(0bjectother)
+如果字符串与other相等，返回true。
+$3tJava的 基 本 程 序 ? ? ? 构5 1•
+booleanequalsIgnoreCase(Stringother)
+如果字符串与other相等（忽略大小写)，返回tme。•booleanstartsWith(Stringprefix)•booleanendsWith(Stringsuffix)如果字符串以suffix开头或结尾，则返回true。•intindexOf(Stringstr)•intindexOf(Stringstr,intfromlndex)•intindexOf(intcp)•intindexOf(intcp,intfromlndex)返回与字符串str或代码点cp匹配的第一个子串的开始位置。这个位置从索引0或fromlndex开始计算。如果在原始串中不存在str，返回-1。•int1astIndexOf(Stringstr)•Int1astIndexOf(Stringstr,intfromlndex)•intlastindexOf(intcp)•int1astindexOf(intcp,intfromlndex)返回与字符串str或代码点cp匹配的最后一个子串的开始位置。这个位置从原始串尾端或fromlndex开始计算。•int1ength()返回字符串的长度。•intcodePointCount(intstartlndex,intendlndex)5.0返回startlndex和endludex-l之间的代码点数量。没有配成对的代用字符将计入代码点。參Stringreplace(CharSequenceoldString,CharSequencenewString)返回一个新字符串。这个字符串用newString代替原始字符串中所有的oldString。可以用String或StringBuilder对象作为CharSequence参数。•Stringsubstring(intbeginlndex)參Stringsubstring(intbeginlndex,intendlndex)返回一个新字符串。这个字符串包含原始字符串中从beginlndex到串尾或endlndex-l的所有代码单元。•StringtoLowerCase()參StringtoUpperCase()返回一个新字符串。这个字符串将原始字符串中的大写字母改为小写，或者将原始字符串中的所有小写字母改成了大写字母。•Stringt r i m()返回一个新字符串。这个字符串将删除了原始字符串头部和尾部的空格。•Stringjoin(CharSequencedelimiter,CharSequence...elements)8返回一个新字符串，用给定的定界符连接所有元素。
+
+
+3 . 6.9构建字符串
+    如果需要用许多小段的字符串构建一个字符串，那么应该按照下列步骤进行。首先，构建一个空的字符串构建器：StringBuilderbuilder=newStringBuilderO;当每次需要添加一部分内容时，就调用append方法。builder.append(ch);//appendsasinglecharacterbui1der.append(str);//appendsastring在需要构建字符串时就凋用toString方法，将可以得到一个String对象，其中包含了构建器中的字符序列。StringcompletedString=builder.toString()
+
+
+3.7.3 文件输入与输出
+    要想对文件进行读取，就需要一个用File对象构造一个Scanner对象，如下所示：Scannerin=newScanner(Paths.get("niyflle.txt"),"UTF-8");
+    如果文件名中包含反斜杠符号，就要记住在每个反斜杠之前再加一个额外的反斜杠：“c:\\mydirectory\\myfile.txt”
+
+    要想写入文件，就需要构造一个PrintWriter对象。在构造器中，只需要提供文件名：PrintWriterout=newPrintlulriterC'myfile.txt","UTF-8");
+    如果文件不存在，创建该文件。可以像输出到System.out—样使用print、println以及printf命令。
+
+
+    当采用命令行方式启动一个程序时，可以利用Shell的重定向语法将任意文件关联到System.in和System.out:
+    javaMyProg<rayfile.txt>output.txt
+    这样，就不必担心处理IOException异常了
+
+
+for 循环
+    尽管Java允许在for循环的各个部分放置任何表达式，但有一条不成文的规则：for语句的3个部分应该对同一个计数器变量进行初始化、检测和更新。若不遵守这一规则，编写的循环常常晦涩难懂
+
+与C++不同，Java还提供了一种带标签的break语句，用于跳出多重嵌套的循环语句。
+请注意，标签必须放在希望跳出的最外层循环之前，并且必须紧跟一个冒号。
+
+3.9 大数值
+    如果基本的整数和浮点数精度不能够满足需求，那么可以使用jaVa.math包中的两个很有用的类：Biglnteger和BigDecimaL这两个类可以处理包含任意长度数字序列的数值。Biglnteger类实现了任意精度的整数运算，BigDecimal实现了任意精度的浮点数运算。
+    使用静态的valueOf方法可以将普通的数值转换为大数值：
+    Biglntegera=Biglnteger.valueOf(100);
+    遗憾的是，不能使用人们熟悉的算术运算符（如：+和*)处理大数值。而需要使用大数值类中的add和multiply方法。
+    Biglntegerc=a.add(b);
+    //c=a+b
+    Biglntegerd=c.nultipiy(b.add(Biglnteger.valueOf(2)));
+    //d=c*(b+2)
+
+3.10 数组
+    创建一个数字数组时，所有元素都初始化为0。boolean数组的元素会初始化为fals%对象数组的元素则初始化为一个特殊值null,这表示这些元素（还）未存放任何对象。初学者对此可能有些不解。例如，String[]names=newString[10];会创建一个包含10个字符串的数组，所有字符串都为null。
+
+3.10.1 for each循环
+    for(intelement:a)System.out.println(element):打印数组a的每一个元素，一个元素占一行。这个循环应该读作“循环a中的每一个元素”（foreachelementina)。
+
+
+3.10.2  数组初始化以及匿名数组
+    在Java中，提供了一种创建数组对象并同时赋予初始值的简化书写形式。下面是一例子：int[]smallPrimes={2,3,5,7,11,13};请注意，在使用这种语句时，不需要调用new。甚至还可以初始化一个匿名的数组：newintD{17,19,23,29,31,37}这种表示法将创建一个新数组并利用括号中提供的值进行初始化，数组的大小就是初始值的个数。使用这种语法形式可以在不创建新变量的情况下重新初始化一个数组。例如：smallPrimes=newint[]{17,19,23,29,31,37};
+
+
+3.10.3  数组拷贝
+    两个变量将引用同一个数组：intQluckyNumbers=smallPrimes;1uckyNumbers[S]=12;//nowsmallPrimes[5]isalso12图3-14显示了拷贝的结果。如果希望将一个数组的所有值拷贝到一个新的数组中去，就要使用Arrays类的copyOf方法：l u c k y N u m b e r f e=|{"1 1图3-1 4拷贝一个数组变量int[]copiedLuckyNumbers=Arrays.copyOf(luckyNumbers,luckyNumbers.length);第2个参数是新数组的长度。这个方法通常用来增加数组的大小：luckyNumbers=Arrays.copyOf(luckyNumbers,2*luckyNumbers.length);如果数组元素是数值型，那么多余的元素将被赋值为0;如果数组元素是布尔型，则将赋值为false。相反，如果长度小于原始数组的长度，则只拷贝最前面的数据元素。
+
+    Java中的[]运算符被预定义为检查数组边界，而且没有指针运算，即不能通过a加1得到数组的下一个元素。
+
+3.10.5 数组排序
+    要想对数值型数组进行排序，可以使用Arrays类中的sort方法.
+    Math.rand0m方法将返回一个0到1之间（包含0、不包含1)的随机浮点数。用乘以这个浮点数，就可以得到从0到n-l之间的一个随机数。intr=(int)(Math.random0*n)
+
+
+第四章   对象与类
+    实现封装的关键在于绝对不能让类中的方法直接地访问其他类的实例域。程序仅通过对象的方法与对象数据进行交互。封装给对象赋予了“黑盒”特征，这是提高重用性和可靠性的关键。这意味着一个类可以全面地改变存储数据的方式，只要仍旧使用同样的方法操作数据，其他对象就不会知道或介意所发生的变化。
+
+
+4.2.1 对象与对象变量
+    在Java程序设计语言中，使用构造器（constructor)构造新实例。
+    一定要认识到：一个对象变量并没有实际包含一个对象，而仅仅引用一个对象。
+    在Java中，任何对象变量的值都是对存储在另外一个地方的一个对象的引用。new操作符的返回值也是一个引用。
+
+    在Java语言中，这些问题都不复存在。如果使用一个没有初始化的指针，运行系统将会产生一个运行时错误，而不是生成一个随机的结果，同时，不必担心内存管理问题，垃圾收集器将会处理相关的事宜。
+
+    在Java中，必须使用clone方法获得对象的完整拷贝
+
+    只 访 问 对 象 而 不 修 改 对 象 的 方 法 有 时 称 为 访 问 器 方 法
+
+
+    •构造器与类同名
+    •每个类可以有一个以上的构造器
+    •构造器可以有0个、1个或多个参数
+    •构造器没有返回值
+    •构造器总是伴随着new操作一起调用
+
+    在Java中，为了实现一个私有的方法，只需将关键字public改为private即可。
+
+4.3.9   final实例域
+    可以将实例域定义为final。构建对象时必须初始化这样的域。也就是说，必须确保在每一个构造器执行之后，这个域的值被设置，并且在后面的操作中，不能够再对它进行修改。
+    final修饰符大都应用于基本（primitive)类型域，或不可变（immutable)类的域（如果类中的每个方法都不会改变其对象，这种类就是不可变的类。
+
+4.4 静态域与静态方法
+    如果将域定义为static,每个类中只有一个这样的域。而每一个对象对于所有的实例域却都有自己的一份拷贝。
+
+
+    在下面?种情?下使用??方法：
+    •一方法不需要访问对象状态，其所需参数都是通过显式参数提供（例如：Math.pow)0
+    •一个方法只需要访问类的静态域（例如：Employee.getNextldh
+
+4.4.4 工厂方法
+    NumberFormatcurrencyFormatter=NumberFormat.getCurrencylnstanceO;NumberFormatpercentFormatter=NumberFormat.getPercentlnstance()；doublex=0.1;System.out.println(currencyFormatter.format(x));//printsSO.10System.out.println(percentFomatter.format(x));//prints10%
+
+4.4.5
+    main方法不对任何对象进行操作。事实上，在启动程序时还没有任何一个对象。静态的main方法将执行并创建程序所需要的对象。
+
+4.5  方法参数
+    按值调用（callbyvalue)表示方法接收的是调用者提供的值。而按引用调用（callbyreference)表示方法接收的是调用者提供的变量地址。一个方法可以修改传递引用所对应的变量值，而不能修改传递值调用所对应的变量值。
+    方法得到的是对象引用的拷贝，对象引用及其他的拷贝同时引用同一个对象。
+    Java程序设计语言对对象采用的不是引用调用，实际上，对象引用是按值传递的。
+    下面总结一下Java中方法参数的使用情况：
+    •一个方法不能修改一个基本数据类型的参数（即数值型或布尔型）。
+    •一个方法可以改变一个对象参数的状态。
+    •一个方法不能让对象参数引用一个新的对象。
+
+
+4.6  对象构造
+    前面已经学习了编写简单的构造器，可以定义对象的初始状态。但是，由于对象构造非常重要，所以Java提供了多种编写构造器的机制。
+
+4.6.1 重载
+    如果多个方法有相同的名字、不同的参数，便产生了重载。
+
+4.6.2   默认域初始化
+    如果在构造器中没有显式地给域赋予初值，那么就会被自动地赋为默认值：数值为0、布尔值为false、对象引用为null。
+
+4.6.3   无参数的构造器
+    如果在编写一个类时没有编写构造器，那么系统就会提供一个无参数构造器。这个构造器将所有的实例域设置为默认值。于是，实例域中的数值型数据设置为0、布尔型数据设置为false、所有对象变量将设置为null。
+
+4.6.4   显式域初始化
+    在执行构造器之前，先执行赋值操作。当一个类的所有构造器都希望把相同的值赋予某个特定的实例域时，这种方式特别有用。
+
+4.6.6  调用另一个构造器
+    采用这种方式使用this关键字非常有用，这样对公共的构造器代码部分只编写一次即可。
+
+4.6.8   对象析构与finalize方法
+    可以为任何一个类添加finalize方法。finalize方法将在垃圾回收器清除对象之前调用。在实际应用中，不要依赖于使用finalize方法回收任何短缺的资源，这是因为很难知道这个方法什么时候才能够调用。
+
+4.7     包
+    使用包的主要原因是确保类名的唯一性。假如两个程序员不约而同地建立了Employee类。只要将这些类放置在不同的包中，就不会产生冲突。事实上，为了保证包名的绝对唯一性，Sun公司建议将公司的因特网域名（这显然是独一无二的）以逆序的形式作为包名，并且对于不同的项目使用不同的子包。
+
+4.7.1   类的导入
+    一个类可以使用所属包中的所有类，以及其他包中的公有类（publicclass)。
+    我们可以采用两种方式访问另一个包中的公有类。
+
+4.7.2   静态导入
+    mportstaticjava.lang.System.*;就可以使用System类的静态方法和静态域，而不必加类名前缀：
+
+4.7.3   将类放入包中
+    如果没有在源文件中放置package语句，这个源文件中的类就被放置在一个默认包(defaulfpackage)中。默认包是一个没有名字的包。在此之前，我们定义的所有类都在默认包中。
+
+4.7.4   包作用域
+
+4.8   类路径
+    类存储在文件系统的子目录中。类的路径必须与包名匹配。类文件也可以存储在JAR(Java归档）文件中。在一个JAR文件中，可以包含多个压缩形式的类文件和子目录，这样既可以节省又可以改善性能。
+    JAR文件使用ZIP格式组织文件和子目录。可以使用所有ZIP实用程序查看内部的rt.jar以及其他的JAR文件。
+
+4.8.1  设置类路径
+    java -classpath/home/user/dassdir:.:/home/user/archives/archive.jarHyProg
+    利用-dasspath选项设置类路径是首选的方法，也可以通过设置CLASSPATH环境变量完成这个操作。其详细情况依赖于所使用的shell。在BourneAgainshell(bash)中，命令格式如下：
+    exportCLASSPATH=/home/user/classdir:.:/home/user/archives/archive.jar
+    在Windowsshell,命令格式如下：
+    setCLASSPATH=c:\classdir;.;c:\archives\archive.jar
+    直到退出shell为止，类路径设置均有效。
+
+4.9     文档注释
+    由于文档注释与源代码在同一个文件中，在修改源代码的同时，重新运行javadoc就可以轻而易举地保持两者的一致性。
+
+4.9.1   注释的插入
+    javadoc实用程序（utility)从下面几个特性中抽取信息：
+    •包
+    •公有类与接口
+    •公有的和受保护的构造器及方法
+    •公有的和受保护的域
+
+4.9.6   包与概述注释
+    想产生包注释，就需要在每一个包目录中添加一个单独的文件。
+    1)提供一个以package.html命名的HTML文件。在标记<body>—</body>之间的所有文本都会被抽取出来。
+    2)提供一个以package-info.java命名的Java文件。这个文件必须包含一个初始的以/**和*/界定的Javadoc注释，跟随在一个包语句之后。它不应该包含更多的代码或注释。
+
+4.9.7   注释的抽取
+    2)如果是一个包，应该运行命令:
+    javadoc-ddocDirectorynameOfPackage
+    或对于多个包生成文档，运:
+    javadoc-ddocDirectorynameOfPackage\nameOfPackage...
+    如果文件在默认包中，就应该运行：
+    javadoc-ddocDirectory*.java
+
+4.10    类设计技巧
+    1.一定要保证数据私有
+    2.一定要对数据初始化
+    3.不要在类中使用过多的基本类型
+    4.不是所有的域都需要独立的域访问器和域更改器
+    

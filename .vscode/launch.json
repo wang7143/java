@@ -1,0 +1,120 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PackageTest",
+            "request": "launch",
+            "mainClass": "PackageTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ConstructorTest",
+            "request": "launch",
+            "mainClass": "ConstructorTest.ConstructorTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ParamTest",
+            "request": "launch",
+            "mainClass": "ParamTest.ParamTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - StaticTest",
+            "request": "launch",
+            "mainClass": "StaticTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - EmployeeTest",
+            "request": "launch",
+            "mainClass": "EmployeeTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CalendarTest",
+            "request": "launch",
+            "mainClass": "CalendarTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CompoundInterset",
+            "request": "launch",
+            "mainClass": "CompoundInterset",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Args<java_d0bf9549>",
+            "request": "launch",
+            "mainClass": "Args",
+            "args": "-g",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BigIntegerTest<java_d0bf9549>",
+            "request": "launch",
+            "mainClass": "BigIntegerTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ImageViewer<java_d0bf9549>",
+            "request": "launch",
+            "mainClass": "ImageViewer",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LotteryOdds<java_d0bf9549>",
+            "request": "launch",
+            "mainClass": "LotteryOdds",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Pro3_2<java_d0bf9549>",
+            "request": "launch",
+            "mainClass": "Pro3_2",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Retirement<java_d0bf9549>",
+            "request": "launch",
+            "mainClass": "Retirement",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Retirment2<java_d0bf9549>",
+            "request": "launch",
+            "mainClass": "Retirment2",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Welcome<java_d0bf9549>",
+            "request": "launch",
+            "mainClass": "Welcome",
+            "projectName": "java_d0bf9549"
+        }
+    ]
+}
