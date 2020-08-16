@@ -1,6 +1,5 @@
 Java是一个完整的平台，有一个庞大的库，其中包含了很多可重用的代码和一个提供诸如安全性、跨操作系统的可移植性以及自动垃圾收集等服务的执行环境。
 
-
 1）简单性
 2）面向对象
 3）分布式
@@ -89,8 +88,13 @@ charcharAt(intindex)
 如果字符串与other相等，返回true。
 $3tJava的 基 本 程 序 ? ? ? 构5 1•
 booleanequalsIgnoreCase(Stringother)
-如果字符串与other相等（忽略大小写)，返回tme。•booleanstartsWith(Stringprefix)•booleanendsWith(Stringsuffix)如果字符串以suffix开头或结尾，则返回true。•intindexOf(Stringstr)•intindexOf(Stringstr,intfromlndex)•intindexOf(intcp)•intindexOf(intcp,intfromlndex)返回与字符串str或代码点cp匹配的第一个子串的开始位置。这个位置从索引0或fromlndex开始计算。如果在原始串中不存在str，返回-1。•int1astIndexOf(Stringstr)•Int1astIndexOf(Stringstr,intfromlndex)•intlastindexOf(intcp)•int1astindexOf(intcp,intfromlndex)返回与字符串str或代码点cp匹配的最后一个子串的开始位置。这个位置从原始串尾端或fromlndex开始计算。•int1ength()返回字符串的长度。•intcodePointCount(intstartlndex,intendlndex)5.0返回startlndex和endludex-l之间的代码点数量。没有配成对的代用字符将计入代码点。參Stringreplace(CharSequenceoldString,CharSequencenewString)返回一个新字符串。这个字符串用newString代替原始字符串中所有的oldString。可以用String或StringBuilder对象作为CharSequence参数。•Stringsubstring(intbeginlndex)參Stringsubstring(intbeginlndex,intendlndex)返回一个新字符串。这个字符串包含原始字符串中从beginlndex到串尾或endlndex-l的所有代码单元。•StringtoLowerCase()參StringtoUpperCase()返回一个新字符串。这个字符串将原始字符串中的大写字母改为小写，或者将原始字符串中的所有小写字母改成了大写字母。•Stringt r i m()返回一个新字符串。这个字符串将删除了原始字符串头部和尾部的空格。•Stringjoin(CharSequencedelimiter,CharSequence...elements)8返回一个新字符串，用给定的定界符连接所有元素。
+如果字符串与other相等（忽略大小写)，返回tme。•booleanstartsWith(Stringprefix)•booleanendsWith(Stringsuffix)如果字符串以suffix开头或结尾，则返回true。
 
+•intindexOf(Stringstr)•intindexOf(Stringstr,intfromlndex)•intindexOf(intcp)•intindexOf(intcp,intfromlndex)返回与字符串str或代码点cp匹配的第一个子串的开始位置。这个位置从索引0或fromlndex开始计算。如果在原始串中不存在str，返回-1。
+
+•int1astIndexOf(Stringstr)•Int1astIndexOf(Stringstr,intfromlndex)•intlastindexOf(intcp)•int1astindexOf(intcp,intfromlndex)返回与字符串str或代码点cp匹配的最后一个子串的开始位置。这个位置从原始串尾端或fromlndex开始计算。
+
+•int1ength()返回字符串的长度。•intcodePointCount(intstartlndex,intendlndex)5.0返回startlndex和endludex-l之间的代码点数量。没有配成对的代用字符将计入代码点。參Stringreplace(CharSequenceoldString,CharSequencenewString)返回一个新字符串。这个字符串用newString代替原始字符串中所有的oldString。可以用String或StringBuilder对象作为CharSequence参数。•Stringsubstring(intbeginlndex)參Stringsubstring(intbeginlndex,intendlndex)返回一个新字符串。这个字符串包含原始字符串中从beginlndex到串尾或endlndex-l的所有代码单元。•StringtoLowerCase()參StringtoUpperCase()返回一个新字符串。这个字符串将原始字符串中的大写字母改为小写，或者将原始字符串中的所有小写字母改成了大写字母。•Stringt r i m()返回一个新字符串。这个字符串将删除了原始字符串头部和尾部的空格。•Stringjoin(CharSequencedelimiter,CharSequence...elements)8返回一个新字符串，用给定的定界符连接所有元素。
 
 3 . 6.9构建字符串
     如果需要用许多小段的字符串构建一个字符串，那么应该按照下列步骤进行。首先，构建一个空的字符串构建器：StringBuilderbuilder=newStringBuilderO;当每次需要添加一部分内容时，就调用append方法。builder.append(ch);//appendsasinglecharacterbui1der.append(str);//appendsastring在需要构建字符串时就凋用toString方法，将可以得到一个String对象，其中包含了构建器中的字符序列。StringcompletedString=builder.toString()
@@ -148,7 +152,6 @@ for 循环
 
 第四章   对象与类
     实现封装的关键在于绝对不能让类中的方法直接地访问其他类的实例域。程序仅通过对象的方法与对象数据进行交互。封装给对象赋予了“黑盒”特征，这是提高重用性和可靠性的关键。这意味着一个类可以全面地改变存储数据的方式，只要仍旧使用同样的方法操作数据，其他对象就不会知道或介意所发生的变化。
-
 
 4.2.1 对象与对象变量
     在Java程序设计语言中，使用构造器（constructor)构造新实例。
@@ -274,4 +277,34 @@ for 循环
     2.一定要对数据初始化
     3.不要在类中使用过多的基本类型
     4.不是所有的域都需要独立的域访问器和域更改器
+    5.将职责过多的类进行分解
+    6.类名和方法名要能够体现它们的职责
+    习惯是访问器方法用小写get开头(getSalary),更改器方法用小写的set开头（setSalary)
+    7.优先使用不可变的类
+
+
+    第  五  章          继承
+
+▲类、超类和子类          ▲Object：所有类的超类
+▲泛型数组列表            ▲对象包装器与自动装箱
+▲参数数量可变的方法      ▲枚举类
+▲反射                   ▲继承的设计技巧
+
+反射是指在程序运行期间发现更多的类及其属性的能力。
+
+5.1 类、超类和子类
+关键字extends表明正在构造的新类派生于一个已存在的类。已存在的类称为超类(superclass)、基类（baseclass)或父类（parentclass);新类称为子类（subclass)、派生类(derivedclass)或孩子类（childclass)。超类和子类是Java程序员最常用的两个术语，而了解其他语言的程序员可能更加偏爱使用父类和孩子类，这些都是继承时使用的术语。
+
+5.1.2  覆盖方法
+    在Java中使用关键字super调用超类的方法，而在C++中则采用超类名加上：：操作符的形式。
+
+5.1.3   子类构造器
+    关键字this有两个用途：一是引用隐式参数，二是调用该类其他的构造器，同样，super关键字也有两个用途：一是调用超类的方法，二是调用超类的构造器。在调用构造器的时候，这两个关键字的使用方式很相似。调用构造器的语句只能作为另一个构造器的第一条语句出现。构造参数既可以传递给本类（this)的其他构造器，也可以传递给超类（super)的构造器。
+    一个对象变量（例如，变量e)可以指示多种实际类型的现象被称为多态
+    在运行时能够自动地选择调用哪个方法的现象称为动态绑定
+
+5.1.5   多态
+    在Java中，子类数组的引用可以转换成超类数组的引用，而不需要采用强制类型转换。
+
+4.1.6  理解方法调用
     

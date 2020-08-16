@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ManagerTest",
+            "request": "launch",
+            "mainClass": "inheritance.ManagerTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - PackageTest",
             "request": "launch",
             "mainClass": "PackageTest",
