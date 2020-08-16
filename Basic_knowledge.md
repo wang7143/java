@@ -1,6 +1,5 @@
 Java是一个完整的平台，有一个庞大的库，其中包含了很多可重用的代码和一个提供诸如安全性、跨操作系统的可移植性以及自动垃圾收集等服务的执行环境。
 
-
 1）简单性
 2）面向对象
 3）分布式
@@ -89,8 +88,13 @@ charcharAt(intindex)
 如果字符串与other相等，返回true。
 $3tJava的 基 本 程 序 ? ? ? 构5 1•
 booleanequalsIgnoreCase(Stringother)
-如果字符串与other相等（忽略大小写)，返回tme。•booleanstartsWith(Stringprefix)•booleanendsWith(Stringsuffix)如果字符串以suffix开头或结尾，则返回true。•intindexOf(Stringstr)•intindexOf(Stringstr,intfromlndex)•intindexOf(intcp)•intindexOf(intcp,intfromlndex)返回与字符串str或代码点cp匹配的第一个子串的开始位置。这个位置从索引0或fromlndex开始计算。如果在原始串中不存在str，返回-1。•int1astIndexOf(Stringstr)•Int1astIndexOf(Stringstr,intfromlndex)•intlastindexOf(intcp)•int1astindexOf(intcp,intfromlndex)返回与字符串str或代码点cp匹配的最后一个子串的开始位置。这个位置从原始串尾端或fromlndex开始计算。•int1ength()返回字符串的长度。•intcodePointCount(intstartlndex,intendlndex)5.0返回startlndex和endludex-l之间的代码点数量。没有配成对的代用字符将计入代码点。參Stringreplace(CharSequenceoldString,CharSequencenewString)返回一个新字符串。这个字符串用newString代替原始字符串中所有的oldString。可以用String或StringBuilder对象作为CharSequence参数。•Stringsubstring(intbeginlndex)參Stringsubstring(intbeginlndex,intendlndex)返回一个新字符串。这个字符串包含原始字符串中从beginlndex到串尾或endlndex-l的所有代码单元。•StringtoLowerCase()參StringtoUpperCase()返回一个新字符串。这个字符串将原始字符串中的大写字母改为小写，或者将原始字符串中的所有小写字母改成了大写字母。•Stringt r i m()返回一个新字符串。这个字符串将删除了原始字符串头部和尾部的空格。•Stringjoin(CharSequencedelimiter,CharSequence...elements)8返回一个新字符串，用给定的定界符连接所有元素。
+如果字符串与other相等（忽略大小写)，返回tme。•booleanstartsWith(Stringprefix)•booleanendsWith(Stringsuffix)如果字符串以suffix开头或结尾，则返回true。
 
+•intindexOf(Stringstr)•intindexOf(Stringstr,intfromlndex)•intindexOf(intcp)•intindexOf(intcp,intfromlndex)返回与字符串str或代码点cp匹配的第一个子串的开始位置。这个位置从索引0或fromlndex开始计算。如果在原始串中不存在str，返回-1。
+
+•int1astIndexOf(Stringstr)•Int1astIndexOf(Stringstr,intfromlndex)•intlastindexOf(intcp)•int1astindexOf(intcp,intfromlndex)返回与字符串str或代码点cp匹配的最后一个子串的开始位置。这个位置从原始串尾端或fromlndex开始计算。
+
+•int1ength()返回字符串的长度。•intcodePointCount(intstartlndex,intendlndex)5.0返回startlndex和endludex-l之间的代码点数量。没有配成对的代用字符将计入代码点。參Stringreplace(CharSequenceoldString,CharSequencenewString)返回一个新字符串。这个字符串用newString代替原始字符串中所有的oldString。可以用String或StringBuilder对象作为CharSequence参数。•Stringsubstring(intbeginlndex)參Stringsubstring(intbeginlndex,intendlndex)返回一个新字符串。这个字符串包含原始字符串中从beginlndex到串尾或endlndex-l的所有代码单元。•StringtoLowerCase()參StringtoUpperCase()返回一个新字符串。这个字符串将原始字符串中的大写字母改为小写，或者将原始字符串中的所有小写字母改成了大写字母。•Stringt r i m()返回一个新字符串。这个字符串将删除了原始字符串头部和尾部的空格。•Stringjoin(CharSequencedelimiter,CharSequence...elements)8返回一个新字符串，用给定的定界符连接所有元素。
 
 3 . 6.9构建字符串
     如果需要用许多小段的字符串构建一个字符串，那么应该按照下列步骤进行。首先，构建一个空的字符串构建器：StringBuilderbuilder=newStringBuilderO;当每次需要添加一部分内容时，就调用append方法。builder.append(ch);//appendsasinglecharacterbui1der.append(str);//appendsastring在需要构建字符串时就凋用toString方法，将可以得到一个String对象，其中包含了构建器中的字符序列。StringcompletedString=builder.toString()
@@ -148,7 +152,6 @@ for 循环
 
 第四章   对象与类
     实现封装的关键在于绝对不能让类中的方法直接地访问其他类的实例域。程序仅通过对象的方法与对象数据进行交互。封装给对象赋予了“黑盒”特征，这是提高重用性和可靠性的关键。这意味着一个类可以全面地改变存储数据的方式，只要仍旧使用同样的方法操作数据，其他对象就不会知道或介意所发生的变化。
-
 
 4.2.1 对象与对象变量
     在Java程序设计语言中，使用构造器（constructor)构造新实例。
@@ -274,4 +277,102 @@ for 循环
     2.一定要对数据初始化
     3.不要在类中使用过多的基本类型
     4.不是所有的域都需要独立的域访问器和域更改器
+    5.将职责过多的类进行分解
+    6.类名和方法名要能够体现它们的职责
+    习惯是访问器方法用小写get开头(getSalary),更改器方法用小写的set开头（setSalary)
+    7.优先使用不可变的类
+
+
+    第  五  章          继承
+
+▲类、超类和子类          ▲Object：所有类的超类
+▲泛型数组列表            ▲对象包装器与自动装箱
+▲参数数量可变的方法      ▲枚举类
+▲反射                   ▲继承的设计技巧
+
+反射是指在程序运行期间发现更多的类及其属性的能力。
+
+5.1 类、超类和子类
+关键字extends表明正在构造的新类派生于一个已存在的类。已存在的类称为超类(superclass)、基类（baseclass)或父类（parentclass);新类称为子类（subclass)、派生类(derivedclass)或孩子类（childclass)。超类和子类是Java程序员最常用的两个术语，而了解其他语言的程序员可能更加偏爱使用父类和孩子类，这些都是继承时使用的术语。
+
+5.1.2  覆盖方法
+    在Java中使用关键字super调用超类的方法，而在C++中则采用超类名加上：：操作符的形式。
+
+5.1.3   子类构造器
+    关键字this有两个用途：一是引用隐式参数，二是调用该类其他的构造器，同样，super关键字也有两个用途：一是调用超类的方法，二是调用超类的构造器。在调用构造器的时候，这两个关键字的使用方式很相似。调用构造器的语句只能作为另一个构造器的第一条语句出现。构造参数既可以传递给本类（this)的其他构造器，也可以传递给超类（super)的构造器。
+    一个对象变量（例如，变量e)可以指示多种实际类型的现象被称为多态
+    在运行时能够自动地选择调用哪个方法的现象称为动态绑定
+
+5.1.5   多态
+    在Java中，子类数组的引用可以转换成超类数组的引用，而不需要采用强制类型转换。
+
+4.1.6  理解方法调用
+    每次调用方法都要进行搜索，时间开销相当大。因此，虚拟机预先为每个类创建了一个方法表（methodtable),其中列出了所有方法的签名和实际调用的方法。这样一来，在真正调用方法的时候，虚拟机仅查找这个表就行了。
+
+    动态绑定有一个非常重要的特性：无需对现存的代码进行修改，就可以对程序进行扩展。假设增加一个新类Executive,并且变量e有可能引用这个类的对象，我们不需要对包含调用e.getSalary()的代码进行重新编译。如果e恰好引用一个Executive类的对象，就会自动地调用Executive.getSalaryO方法
+
+    在覆盖一个方法的时候，子类方法不能低于超类方法的可见性。特别是，如果超类方法是public,子类方法一定要声明为public。经常会发生这类错误：在声明子类方法的时候，遗漏了public修饰符。此时，编译器将会把它解释为试图提供更严格的访问权限。
+
+5.1.7   阻止继承： final类和方法
+    不允许扩展的类被称为final类。如果在定义类的时候使用了final修饰符就表明这个类是final类。
+    `
+    public final class Executive extends Manager
+    {
+        ...
+    }
+    `
+    类中的特定方法也可以被声明为final。如果这样做，子类就不能覆盖这个方法
+
+    前面曾经说过，域也可以被声明为final。对于final域来说，构造对象之后就不允许改变它们的值了。不过，如果将一个类声明为final，只有其中的方法自动地成为final,而不包括域。
+
+
+5.1.8    强制类型转换
+    对象引用的转换语法与数值表达式的类型转换类似，仅需要用一对圆括号将目标类名括起来，并放置在需要转换的对象引用之前就可以了。
+    进行类型转换的唯一原因是：在暂时忽视对象的实际类型之后，使用对象的全部功能。
+
+    将一个值存人变量时，编译器将检查是否允许该操作。将一个了-类的引用赋给一个超类变量，编译器是允许的。但将一个超类的引用赋给一个子类变量，必须进行类型转换，这样才能够通过运行时的检査。
+
+    在进行类型转换之前，先查看一下是否能够成功地转换。这个过程简单地使用instanceof操作符就可以实现。
+    `
+    if (staff[1] instanceof Manager)
+    {
+        do something ...
+    }
+    `
+    在一般情况下，应该尽量少用类型转换和instanceof运算符。
+
+
+5.1.9   抽象类
+    抽象方法充当着占位的角色，它们的具体实现在子类中。扩展抽象类可以有两种选择。一种是在抽象类中定义部分抽象类方法或不定义抽象类方法，这样就必须将子类也标记为抽象类；另一种是定义全部的抽象方法，这样一来，子类就不是抽象的了。
+    抽象类不能被实例化。也就是说，如果将一个类声明为abstract,就不能创建这个类的对象。
+
+    在Java程序设计语言中，抽象方法是一个重要的概念。在接口（interface)中将会看到更多的抽象方法。
+
+5.1.10  受保护访问
+    在有些时候，人们希望超类中的某些方法允许被子类访问，或允许子类的方法访问超类的某个域。为此，需要将这些方法或域声明为protected。
+
+    受保护的方法更具有实际意义。如果需要限制某个方法的使用，就可以将它声明为protected。这表明子类（可能很熟悉祖先类）得到信任，可以正确地使用这个方法，而其他类则不行。
+
+    归纳一下Java用于控制可见性的4个访问修饰符：
+    1)仅对本类可见private。
+    2)对所有类可见public。
+    3)对本包和所有子类可见protected。
+    4)对本包可见——默认（很遗憾)，不需要修饰符。
+
+5.2     Object: 所有类的超类
     
+5.2.2   相等测试与继承
+    Java语言规范要求equals方法具有下面的特性：
+    1)自反性：对于任何非空引用x,x.equals(x)应该返回true。
+    2)对称性:对于任何引用x和y,当且仅当y.equals(x)返回true,x.equals(y)也应该返回true。
+    3)传递性：对于任何引用x、y和z,如果x.equals(y)返回true，y.equals(z)返回true,x.equals(z)也应该返回true。
+    4)一致性：如果x和y引用的对象没有发生变化，反复调用x.equals(y)应该返回同样的结果。
+    5)对于任意非空引用x,x.equals(null)应该返回false。
+    在雇员和经理的例子中，只要对应的域相等，就认为两个对象相等。如果两个Manager对象所对应的姓名、薪水和雇佣日期均相等，而奖金不相等，就认为它们是不相同的，因此，可以使用getClass检测。但是，假设使用雇员的ID作为相等的检测标准，并且这个相等的概念适用于所有的子类，就可以使用instanceof进行检测，并应该将Employee.equals声明为final。
+
+    1)显式参数命名为otherObject,稍后需要将它转换成另一个叫做other的变量。
+    2)检测this与otherObject是否引用同一个对象：if(this=otherObject)returntrue;这条语句只是一个优化。实际上，这是一种经常采用的形式。因为计算这个等式要比一个一个地比较类中的域所付出的代价小得多。
+    3)检测otherObject是否为null,如果为null,返回false。这项检测是很必要的。if(otherObject=null)returnfalse;
+    4)比较this与otherObject是否属于同一个类。如果equals的语义在每个子类中有所改变，就使用getClass检测：if(getClass()!=otherObject.getCIassO)returnfalse;如果所有的子类都拥有统一的语义，就使用instanceof检测：if(!(otherObjectinstanceofClassName))returnfalse;
+    5)将otherObject转换为相应的类类型变量：ClassNameother=(ClassName)otherObject
+    6)现在开始对所有需要比较的域进行比较了。使用=比较基本类型域，使用equals比较对象域。如果所有的域都匹配，就返回true;否则返回false。returnfieldl==other.field&&Objects.equa1s(fie1d2,other.field2)如果在子类中重新定义equals,就要在其中包含调用super.equals(other)。
