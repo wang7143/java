@@ -307,6 +307,7 @@ for 循环
     在Java中，子类数组的引用可以转换成超类数组的引用，而不需要采用强制类型转换。
 
 4.1.6  理解方法调用
+<<<<<<< HEAD
     每次调用方法都要进行搜索，时间开销相当大。因此，虚拟机预先为每个类创建了一个方法表（methodtable),其中列出了所有方法的签名和实际调用的方法。这样一来，在真正调用方法的时候，虚拟机仅查找这个表就行了。
 
     动态绑定有一个非常重要的特性：无需对现存的代码进行修改，就可以对程序进行扩展。假设增加一个新类Executive,并且变量e有可能引用这个类的对象，我们不需要对包含调用e.getSalary()的代码进行重新编译。如果e恰好引用一个Executive类的对象，就会自动地调用Executive.getSalaryO方法
@@ -376,3 +377,68 @@ for 循环
     4)比较this与otherObject是否属于同一个类。如果equals的语义在每个子类中有所改变，就使用getClass检测：if(getClass()!=otherObject.getCIassO)returnfalse;如果所有的子类都拥有统一的语义，就使用instanceof检测：if(!(otherObjectinstanceofClassName))returnfalse;
     5)将otherObject转换为相应的类类型变量：ClassNameother=(ClassName)otherObject
     6)现在开始对所有需要比较的域进行比较了。使用=比较基本类型域，使用equals比较对象域。如果所有的域都匹配，就返回true;否则返回false。returnfieldl==other.field&&Objects.equa1s(fie1d2,other.field2)如果在子类中重新定义equals,就要在其中包含调用super.equals(other)。
+
+5.2.3   hashCode 方法
+    散列码（hashcode)是由对象导出的一个整型值。
+
+5.2.4   toString方法
+    用于返回表示对象值的字符串
+    在调用x.toString()的地方可以用""+x替代。这条语句将一个空串与x的字符串表示相连接。这里的x就是x.toString()。与toString不同的是，如果x是基本类型，这条语句照样能够执行。
+    System.out.println(x);
+    println方法就会直接地调用x.toString()，井打印输出得到的字符串。
+    修正的方式是调用静态方法Arrays.toString。
+    代码：Strings=Arrays.toString(luckyNumbers);
+    将生成字符串“[2,3,5,7，11，13]”。
+    要想打印多维数组（即，数组的数组）则需要调用Arrays.deepToString方法。
+    强烈建议为自定义的每一个类增加toString方法。这样做不仅自己受益，而且所有使用这个类的程序员也会从这个日志记录支持中受益匪浅。
+    https://www.cnblogs.com/pop822/p/6215040.html 详细解释== 和 equal 的区别
+     
+    == 比较地址  equal 比价内容
+
+5.3    泛型数组列表
+    ArrayList<Employee> staff = new ArrayListoQ；
+    这被称为“菱形”语法，因为空尖括号o就像是一个菱形。
+
+    数组列表的容量与数组的大小有一个非常重要的区别。如果为数组分配100个元素的存储空间，数组就有100个空位置可以使用。而容量为100个元素的数组列表只是拥有保存100个元素的潜力（实际上，重新分配空间的话，将会超过丨00),但是在最初，甚至完成初始化构造之后，数组列表根本就不含有任何元素。
+
+    staff,size() 将返回staff数组列表的当前元素数量.
+
+    一旦能够确认数组列表的大小不再发生变化，就可以调用trimToSize方法。这个方法将存储区域的大小调整为当前元素数量所需要的存储空间数目。垃圾回收器将回收多余的存储空间。
+
+5.3.1   访问数组列表元素
+    使用add方法为数组添加新元素，而不要使用set方法，它只能替换数组中已经存在的元素内容。
+    Employeee=staff.get(i);
+
+
+5.3.2   类型化与原始数组列表的兼容性
+    一旦能确保不会造成严重的后果，可以用@SuppressWamings("unchecked")标注来标记这个变量能够接受类型转换，如下所示：@SuppressWarnings("unchecked")ArrayList<Employee>result=(ArrayList<Employee>)employeeDB.find(query);//yieldsanotherwarning
+
+5.4     对象包装器与自动装箱
+    常，这些类称为包装器（wrapper）。这些对象包装器类拥有很明显的名字：Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean（前6个类派生于公共的超类Number）。对象包装器类是不可变的，即一旦构造了包装器，就不允许更改包装在其中的值。同时，对象包装器类还是final，因此不能定义它们的子类
+    由于每个值分别包装在对象中，所以ArrayList<lnteger>的效率远远低于int[]数组。因此，应该用它构造小型集合，其原因是此时程序员操作的方便性要比执行效率更加重要。
+    添加int类型的元素到ArrayList<lnteger>中。下面这个调用list.add(3);
+    将自动地变换成
+    list.add(Integer.value0f(3));
+    这种变换被称为自动装箱（autoboxing)。
+    最后强调一下，装箱和拆箱是编译器认可的，而不是虚拟机。编译器在生成类的字节码时，插人必要的方法调用。虚拟机只是执行这些字节码。
+
+5.5    参数数量可变的方法
+    publicclassPrintStream
+    {
+        publicPrintStreamprintf(Stringfmt,Object...args){returnformat(fmt,args);}
+    }这里的省略号...是Java代码的一部分，它表明这个方法可以接收任意数量的对象（除fmt参数之外)。
+
+5.6     枚举类
+
+5.7     反射
+    反射库（reflectionlibrary)提供了一个非常丰富且精心设计的工具集，以便编写能够动态操纵Java代码的程序。特别是在设计或运行中添加新类时，能够快速地应用开发工具动态地查询新添加类的能力。
+    能够分析类能力的程序称为反射（reflective)。
+        *在运行时分析类的能力。
+        •在运行时查看对象，例如，编写一个toString方法供所有类使用。
+        •实现通用的数组操作代码。
+        •利用Method对象，这个对象很像中的函数指针。
+
+5.7.1   class类
+    在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识。这个信息跟踪着每个对象所属的类。虚拟机利用运行时类型信息选择相应的方法执行。
+    Class类实际上是一个泛型类。例如，Employee.class的类型是Class<Employee>。没有说明这个问题的原因是：它将已经抽象的概念更加复杂化了。在大多数实际问题中，可以忽略类型参数，而使用原始的Class类。
+    虚拟机为每个类型管理一个Class对象。
