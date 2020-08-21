@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "CodeLens (Launch) - PersonTest",
             "request": "launch",
             "mainClass": "abstractClasses.PersonTest",
@@ -20,6 +21,8 @@
         },
         {
             "type": "java",
+=======
+>>>>>>> 3d666070f12e882672852ba862ad963bc1d92664
             "name": "CodeLens (Launch) - ManagerTest",
             "request": "launch",
             "mainClass": "inheritance.ManagerTest",

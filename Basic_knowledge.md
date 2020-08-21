@@ -307,6 +307,7 @@ for 循环
     在Java中，子类数组的引用可以转换成超类数组的引用，而不需要采用强制类型转换。
 
 4.1.6  理解方法调用
+<<<<<<< HEAD
     每次调用方法都要进行搜索，时间开销相当大。因此，虚拟机预先为每个类创建了一个方法表（methodtable),其中列出了所有方法的签名和实际调用的方法。这样一来，在真正调用方法的时候，虚拟机仅查找这个表就行了。
 
     动态绑定有一个非常重要的特性：无需对现存的代码进行修改，就可以对程序进行扩展。假设增加一个新类Executive,并且变量e有可能引用这个类的对象，我们不需要对包含调用e.getSalary()的代码进行重新编译。如果e恰好引用一个Executive类的对象，就会自动地调用Executive.getSalaryO方法
@@ -376,3 +377,6 @@ for 循环
     4)比较this与otherObject是否属于同一个类。如果equals的语义在每个子类中有所改变，就使用getClass检测：if(getClass()!=otherObject.getCIassO)returnfalse;如果所有的子类都拥有统一的语义，就使用instanceof检测：if(!(otherObjectinstanceofClassName))returnfalse;
     5)将otherObject转换为相应的类类型变量：ClassNameother=(ClassName)otherObject
     6)现在开始对所有需要比较的域进行比较了。使用=比较基本类型域，使用equals比较对象域。如果所有的域都匹配，就返回true;否则返回false。returnfieldl==other.field&&Objects.equa1s(fie1d2,other.field2)如果在子类中重新定义equals,就要在其中包含调用super.equals(other)。
+=======
+    
+>>>>>>> 3d666070f12e882672852ba862ad963bc1d92664
