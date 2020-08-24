@@ -377,6 +377,7 @@ for 循环
     4)比较this与otherObject是否属于同一个类。如果equals的语义在每个子类中有所改变，就使用getClass检测：if(getClass()!=otherObject.getCIassO)returnfalse;如果所有的子类都拥有统一的语义，就使用instanceof检测：if(!(otherObjectinstanceofClassName))returnfalse;
     5)将otherObject转换为相应的类类型变量：ClassNameother=(ClassName)otherObject
     6)现在开始对所有需要比较的域进行比较了。使用=比较基本类型域，使用equals比较对象域。如果所有的域都匹配，就返回true;否则返回false。returnfieldl==other.field&&Objects.equa1s(fie1d2,other.field2)如果在子类中重新定义equals,就要在其中包含调用super.equals(other)。
+<<<<<<< HEAD
 
 5.2.3   hashCode 方法
     散列码（hashcode)是由对象导出的一个整型值。
@@ -442,3 +443,8 @@ for 循环
     在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识。这个信息跟踪着每个对象所属的类。虚拟机利用运行时类型信息选择相应的方法执行。
     Class类实际上是一个泛型类。例如，Employee.class的类型是Class<Employee>。没有说明这个问题的原因是：它将已经抽象的概念更加复杂化了。在大多数实际问题中，可以忽略类型参数，而使用原始的Class类。
     虚拟机为每个类型管理一个Class对象。
+=======
+=======
+    
+>>>>>>> 3d666070f12e882672852ba862ad963bc1d92664
+>>>>>>> 2e40c6a0eefec9b6d7d8787c79b4a0e8d2426fd9
