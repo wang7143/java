@@ -377,6 +377,7 @@ for 循环
     4)比较this与otherObject是否属于同一个类。如果equals的语义在每个子类中有所改变，就使用getClass检测：if(getClass()!=otherObject.getCIassO)returnfalse;如果所有的子类都拥有统一的语义，就使用instanceof检测：if(!(otherObjectinstanceofClassName))returnfalse;
     5)将otherObject转换为相应的类类型变量：ClassNameother=(ClassName)otherObject
     6)现在开始对所有需要比较的域进行比较了。使用=比较基本类型域，使用equals比较对象域。如果所有的域都匹配，就返回true;否则返回false。returnfieldl==other.field&&Objects.equa1s(fie1d2,other.field2)如果在子类中重新定义equals,就要在其中包含调用super.equals(other)。
+<<<<<<< HEAD
 
 5.2.3   hashCode 方法
     散列码（hashcode)是由对象导出的一个整型值。
@@ -391,7 +392,7 @@ for 循环
     将生成字符串“[2,3,5,7，11，13]”。
     要想打印多维数组（即，数组的数组）则需要调用Arrays.deepToString方法。
     强烈建议为自定义的每一个类增加toString方法。这样做不仅自己受益，而且所有使用这个类的程序员也会从这个日志记录支持中受益匪浅。
-    https://www.cnblogs.com/pop822/p/6215040.html 详细解释== 和 equal 的区别
+    [详细解释== 和 equal 的区别连接](https://www.cnblogs.com/pop822/p/6215040.html) 详细解释== 和 equal 的区别
      
     == 比较地址  equal 比价内容
 
@@ -411,7 +412,11 @@ for 循环
 
 
 5.3.2   类型化与原始数组列表的兼容性
-    一旦能确保不会造成严重的后果，可以用@SuppressWamings("unchecked")标注来标记这个变量能够接受类型转换，如下所示：@SuppressWarnings("unchecked")ArrayList<Employee>result=(ArrayList<Employee>)employeeDB.find(query);//yieldsanotherwarning
+    一旦能确保不会造成严重的后果，可以用@SuppressWamings("unchecked")标注来标记这个变量能够接受类型转换，如下所示：@SuppressWarnings("unchecked")
+
+```java
+ArrayList<Employee>result = (ArrayList<Employee>)employeeDB.find(query);//yieldsanotherwarning
+```
 
 5.4     对象包装器与自动装箱
     常，这些类称为包装器（wrapper）。这些对象包装器类拥有很明显的名字：Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean（前6个类派生于公共的超类Number）。对象包装器类是不可变的，即一旦构造了包装器，就不允许更改包装在其中的值。同时，对象包装器类还是final，因此不能定义它们的子类
@@ -429,7 +434,7 @@ for 循环
     }这里的省略号...是Java代码的一部分，它表明这个方法可以接收任意数量的对象（除fmt参数之外)。
 
 5.6     枚举类
-
+        [枚举类详解地址](https://blog.csdn.net/javazejian/article/details/71333103)
 5.7     反射
     反射库（reflectionlibrary)提供了一个非常丰富且精心设计的工具集，以便编写能够动态操纵Java代码的程序。特别是在设计或运行中添加新类时，能够快速地应用开发工具动态地查询新添加类的能力。
     能够分析类能力的程序称为反射（reflective)。
@@ -441,4 +446,66 @@ for 循环
 5.7.1   class类
     在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识。这个信息跟踪着每个对象所属的类。虚拟机利用运行时类型信息选择相应的方法执行。
     Class类实际上是一个泛型类。例如，Employee.class的类型是Class<Employee>。没有说明这个问题的原因是：它将已经抽象的概念更加复杂化了。在大多数实际问题中，可以忽略类型参数，而使用原始的Class类。
-    虚拟机为每个类型管理一个Class对象。
+    虚拟机为每个类型管理一个Class对象。因此，可以利用=运算符实现两个类对象比较的操作
+    将forName与newlnstance配合起来使用，可以根据存储在字符串中的类名创建一个对象
+
+```java
+Strings="java.util.Random";
+Objectm=Class.forName(s).newlnstance();
+```
+
+### 5.7.2    捕获异常
+
+抛出异常比终止程序要灵活得多，这是因为可以提供一个“捕获”异常的处理器（handler)对异常情况进行处理。
+异常有两种类型：未检查异常和已检查异常。
+
+### 5.7.3   利用反射分析类能力
+
+在java.lang.reflect包中有三个类Field、Method和Constructor分别用于描述类的域、方法和构造器。
+Class类中的getFields、getMethods和getConstructors方 法 将 分 别 返 回 类 提 供 的public域、方法和构造器数组，其中包括超类的公有成员。Class类的getDeclareFields、getDeclareMethods和getDeclaredConstructors方法将分别返回类中声明的全部域、方法和构造器，其中包括私有和受保护成员，但不包括超类的成员。
+
+### 5.7.4   在运行时使用反射分析对象
+
+    反射机制的默认行为受限于Java的访问控制。反射可以查看修改该对象的内部参数，详情查看
+    [实例文件](./objectAnalyzer/objectAnalyzerTest.java)
+
+### 5.7.5   使用反射编写泛型数组代码
+
+    java.lang.reflect包中的Array类允许动态地创建数组。[实例](arrays/CopyofTest.java)
+
+
+### 5.7.6   调用任意方法
+
+    JAVA提供接口来解决，反射机制允许用任意方法。[实例](methods/MethodTableTest.java)
+
+### 5.8     继承的设计技巧
+
+    1.将公共操作和域放在超类
+    2.不要使用受保护的域 
+    第一，子类集合是无限制的，任何一个人都能够由某个类派生一个子类，并编写代码以直接访问protected的实例域，从而破坏了封装性。第二，在Java程序设计语言中，在同一个包中的所有类都可以访问proteced域，而不管它是否为这个类的子类。不过，protected方法对于指示那些不提供一般用途而应在子类中重新定义的方法很有用。
+    3.使用继承实现“is-a”关系
+    4.除非所有继承的方法都有意义，否则不要使用继承
+    5.在覆盖方法时，不要改变预期的行为
+    6.使用多态，而非类型信息
+    7.不要过多地使用反射
+    多态的三个特点：继承
+    重写
+    父类引用指向子类对象
+
+## 第六章  接口、lambda表达式与内部类
+
+### 6.1.1 接口概念
+
+    类实现接口的两个步骤
+    1.将类声明为实现给定的接口。
+     使用关键子implements(工具、器具、用具)   
+
+```java
+class Employee implements Comparable
+```
+
+    2.对接口中的所有方法进行定义。
+
+    ✨在实现接口时，必须把方法声明为public；
+    否则，编译器将认为这个方法的访问属性是包可见性，即类的默认访问属性，
+    之后编译器就会给出试图提供更严格的访问权限的警告信息。

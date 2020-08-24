@@ -18,13 +18,16 @@ public class EnumTest
     }
 }
 
-enum Size
+
+enum Size   //声明Size 是 enum的一个对象
 {
-    SMALL("S"), MEDIUM("M"), LARGE("L"), EXTRA_LARGE("XL");
+    SMALL("S"), MEDIUM("M"), LARGE("L"), EXTRA_LARGE("XL");  //对象里面包含
     private Size(String abbreviation) {this.abbreviation = abbreviation;}
     public String getAbbreviation() {return abbreviation; }
     private String abbreviation;
 }
 
+
 //static Enum valueOf(Class enumClass, String name)
 //返回指定名字、给定类的枚举常量。
+

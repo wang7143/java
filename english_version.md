@@ -27,6 +27,7 @@
     java有个常用扩展库用来应对TCP/IP、HTTP和FTP规则。
 
 1.2.4   Robust (robust control) 鲁棒控制；强健控制
+<<<<<<< HEAD
     java可以运行检查，最大得特点是不用担心因为指针问题导致得内存错误。
 
 1.2.5   Secure  安全的
@@ -41,3 +42,6 @@
 
 
 
+=======
+    
+>>>>>>> 2e40c6a0eefec9b6d7d8787c79b4a0e8d2426fd9
