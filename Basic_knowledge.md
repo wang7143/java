@@ -446,6 +446,7 @@ ArrayList<Employee>result = (ArrayList<Employee>)employeeDB.find(query);//yields
 5.7.1   class类
     在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识。这个信息跟踪着每个对象所属的类。虚拟机利用运行时类型信息选择相应的方法执行。
     Class类实际上是一个泛型类。例如，Employee.class的类型是Class<Employee>。没有说明这个问题的原因是：它将已经抽象的概念更加复杂化了。在大多数实际问题中，可以忽略类型参数，而使用原始的Class类。
+<<<<<<< HEAD
     虚拟机为每个类型管理一个Class对象。因此，可以利用=运算符实现两个类对象比较的操作
     将forName与newlnstance配合起来使用，可以根据存储在字符串中的类名创建一个对象
 
@@ -509,3 +510,11 @@ class Employee implements Comparable
     ✨在实现接口时，必须把方法声明为public；
     否则，编译器将认为这个方法的访问属性是包可见性，即类的默认访问属性，
     之后编译器就会给出试图提供更严格的访问权限的警告信息。
+=======
+    虚拟机为每个类型管理一个Class对象。
+=======
+=======
+    
+>>>>>>> 3d666070f12e882672852ba862ad963bc1d92664
+>>>>>>> 2e40c6a0eefec9b6d7d8787c79b4a0e8d2426fd9
+>>>>>>> 271c099e2a0c85132cfa9b20556a427f538683ce
