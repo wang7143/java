@@ -1,4 +1,4 @@
-package comboBox;
+package examples.corejava10.v1ch12.comboBox;
 
 import java.awt.*;
 import javax.swing.*;

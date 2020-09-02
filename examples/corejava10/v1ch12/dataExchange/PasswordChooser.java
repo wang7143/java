@@ -1,4 +1,4 @@
-package dataExchange;
+package examples.corejava10.v1ch12.dataExchange;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -18,6 +18,10 @@ import javax.swing.SwingUtilities;
  */
 public class PasswordChooser extends JPanel
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -8441948131749665057L;
    private JTextField username;
    private JPasswordField password;
    private JButton okButton;

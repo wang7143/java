@@ -1,4 +1,4 @@
-package image;
+package examples.corejava10.v1ch10.image;
 
 import java.awt.*;
 import javax.swing.*;
@@ -26,6 +26,11 @@ public class ImageTest
  */
 class ImageFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1012917925264855195L;
+
    public ImageFrame()
    {
       add(new ImageComponent());
@@ -38,6 +43,10 @@ class ImageFrame extends JFrame
  */
 class ImageComponent extends JComponent
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 7988204054368399440L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;
 

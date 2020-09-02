@@ -1,4 +1,4 @@
-package methods;
+package examples.corejava10.v1ch05.methods;
 
 import java.lang.reflect.*;
 

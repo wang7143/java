@@ -1,4 +1,4 @@
-package map;
+package examples.corejava10.v1ch09.map;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package menu;
+package examples.corejava10.v1ch12.menu;
 
 import java.awt.*;
 import javax.swing.*;

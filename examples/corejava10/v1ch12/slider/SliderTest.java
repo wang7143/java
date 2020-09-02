@@ -1,4 +1,4 @@
-package slider;
+package examples.corejava10.v1ch12.slider;
 
 import java.awt.*;
 import javax.swing.*;

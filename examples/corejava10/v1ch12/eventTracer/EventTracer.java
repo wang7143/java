@@ -1,4 +1,4 @@
-package eventTracer;
+package examples.corejava10.v1ch12.eventTracer;
 
 import java.awt.*;
 import java.beans.*;

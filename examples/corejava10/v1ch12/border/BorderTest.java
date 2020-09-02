@@ -1,4 +1,4 @@
-package border;
+package examples.corejava10.v1ch12.border;
 
 import java.awt.*;
 import javax.swing.*;

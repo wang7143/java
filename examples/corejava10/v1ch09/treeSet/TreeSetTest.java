@@ -1,4 +1,4 @@
-package treeSet;
+package examples.corejava10.v1ch09.treeSet;
 
 import java.util.*;
 

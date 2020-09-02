@@ -1,9 +1,15 @@
+package examples.corejava10.v1ch02.RoadApplet;
+
 import java.awt.*;
 import java.applet.*;
 import javax.swing.*;
 
 public class RoadApplet extends JApplet
 {  
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
    private RoadComponent roadComponent;
    private JSlider slowdown;
    private JSlider arrival;

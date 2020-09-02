@@ -1,4 +1,4 @@
-package menu;
+package examples.corejava10.v1ch12.menu;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -8,6 +8,10 @@ import javax.swing.*;
  */
 public class MenuFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 3161004476079920716L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;
    private Action saveAction;
@@ -20,6 +24,11 @@ public class MenuFrame extends JFrame
     */
    class TestAction extends AbstractAction
    {
+      /**
+      *
+      */
+      private static final long serialVersionUID = 2272398132498227674L;
+
       public TestAction(String name)
       {
          super(name);
@@ -55,7 +64,12 @@ public class MenuFrame extends JFrame
 
       fileMenu.add(new AbstractAction("Exit")
          {
-            public void actionPerformed(ActionEvent event)
+            /**
+          *
+          */
+         private static final long serialVersionUID = 2320059343319054096L;
+
+         public void actionPerformed(ActionEvent event)
             {
                System.exit(0);
             }
@@ -120,7 +134,8 @@ public class MenuFrame extends JFrame
 
       // you can also add the mnemonic key to an action
       Action aboutAction = new TestAction("About");
-      aboutAction.putValue(Action.MNEMONIC_KEY, new Integer('A'));
+      Integer obj = Integer.valueOf('A');
+      aboutAction.putValue(Action.MNEMONIC_KEY, obj);
       helpMenu.add(aboutAction);
 
       // add all top-level menus to menu bar

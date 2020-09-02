@@ -1,4 +1,4 @@
-package border;
+package examples.corejava10.v1ch12.border;
 
 import java.awt.*;
 import javax.swing.*;
@@ -9,6 +9,10 @@ import javax.swing.border.*;
  */
 public class BorderFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -3640213406624848407L;
    private JPanel demoPanel;
    private JPanel buttonPanel;
    private ButtonGroup group;

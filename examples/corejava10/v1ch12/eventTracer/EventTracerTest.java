@@ -1,4 +1,4 @@
-package eventTracer;
+package examples.corejava10.v1ch12.eventTracer;
 
 import java.awt.*;
 
@@ -24,6 +24,11 @@ public class EventTracerTest
 
 class EventTracerFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 142540868617745208L;
+
    public EventTracerFrame()
    {
       // add a slider and a button

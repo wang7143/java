@@ -1,8 +1,10 @@
-package genericAlgorithms;
+package examples.corejava10.v1ch08.genericAlgorithms;
 
 import java.lang.reflect.*;
 import java.util.*;
 import java.util.function.*;
+
+// import jdk.jfr.Unsigned;
 
 /**
  * @version 1.00 2015-05-21
@@ -28,7 +30,8 @@ public class GenericAlgorithms
 
 class ArrayAlg
 {
-   public static <T extends Comparable> T[] minmax(IntFunction<T[]> constr, T... a)
+   @SuppressWarnings("unchecked")
+   public static <T extends Comparable<T>> T[] minmax(IntFunction<T[]> constr, T... a)
    {
       T[] mm = constr.apply(2);
       T min = a[0];
@@ -41,8 +44,10 @@ class ArrayAlg
       return mm;
    }
    
-   public static <T extends Comparable> T[] minmax(T... a)
+   @SuppressWarnings("unchecked")
+   public static <T extends Comparable<T>> T[] minmax(T... a)
    {
+      
       T[] mm = (T[]) Array.newInstance(a.getClass().getComponentType(), 2);
       T min = a[0];
       T max = a[0];

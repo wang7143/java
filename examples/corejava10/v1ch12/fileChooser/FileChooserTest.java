@@ -1,4 +1,4 @@
-package fileChooser;
+package examples.corejava10.v1ch12.fileChooser;
 
 import java.awt.*;
 import javax.swing.*;

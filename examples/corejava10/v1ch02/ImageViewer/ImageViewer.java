@@ -1,3 +1,5 @@
+package examples.corejava10.v1ch02.ImageViewer;
+
 import java.awt.*;
 import java.io.*;
 import javax.swing.*;
@@ -25,6 +27,10 @@ public class ImageViewer
  */
 class ImageViewerFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
    private JLabel label;
    private JFileChooser chooser;
    private static final int DEFAULT_WIDTH = 300;

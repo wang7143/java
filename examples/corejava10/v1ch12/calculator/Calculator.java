@@ -1,4 +1,4 @@
-package calculator;
+package examples.corejava10.v1ch12.calculator;
 
 import java.awt.*;
 import javax.swing.*;

@@ -1,3 +1,5 @@
+package Sample_program.input_and_ouput;
+
 import java.util.*;
 
 public class Retirment2 {
@@ -23,10 +25,11 @@ public class Retirment2 {
             balance += interest;
             year++;
 
-            //print cureent balance
+            //print current balance
             System.out.print("Ready to retire? (Y/N) ");
             input = in.next();
         }
         while (input.equals("N"));
+        in.close();
     }
 }

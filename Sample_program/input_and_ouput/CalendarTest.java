@@ -1,3 +1,5 @@
+package Sample_program.input_and_ouput;
+
 import java.time.*;
 
 
@@ -10,7 +12,7 @@ public class CalendarTest
 
         date = date.minusDays(today - 1);   //Set to start of month
         DayOfWeek weekday = date.getDayOfWeek();
-        int value = weekday.getValue();   //1 = Mondat,.. 
+        int value = weekday.getValue();   //1 = Monday,.. 
 
         System.out.println("Mon Tue Wed Thu Fri Sat Sun");
         for (int i = 1; i < value; i++)

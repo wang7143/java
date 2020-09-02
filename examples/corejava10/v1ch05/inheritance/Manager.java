@@ -1,4 +1,4 @@
-package inheritance;
+package examples.corejava10.v1ch05.inheritance;
 
 public class Manager extends Employee
 {

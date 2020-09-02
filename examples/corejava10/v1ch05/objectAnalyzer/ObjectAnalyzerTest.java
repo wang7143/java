@@ -1,4 +1,4 @@
-package objectAnalyzer;
+package examples.corejava10.v1ch05.objectAnalyzer;
 
 import java.util.ArrayList;
 

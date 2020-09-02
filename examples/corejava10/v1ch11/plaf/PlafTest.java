@@ -1,4 +1,4 @@
-package plaf;
+package examples.corejava10.v1ch11.plaf;
 
 import java.awt.*;
 import javax.swing.*;

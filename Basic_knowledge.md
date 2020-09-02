@@ -468,16 +468,18 @@ Class类中的getFields、getMethods和getConstructors方 法 将 分 别 返 �
 ### 5.7.4   在运行时使用反射分析对象
 
     反射机制的默认行为受限于Java的访问控制。反射可以查看修改该对象的内部参数，详情查看
-    [实例文件](./objectAnalyzer/objectAnalyzerTest.java)
+[实例文件](./objectAnalyzer/objectAnalyzerTest.java)
 
 ### 5.7.5   使用反射编写泛型数组代码
 
-    java.lang.reflect包中的Array类允许动态地创建数组。[实例](arrays/CopyofTest.java)
+    java.lang.reflect包中的Array类允许动态地创建数组。
+[实例](arrays/CopyofTest.java)
 
 
 ### 5.7.6   调用任意方法
 
-    JAVA提供接口来解决，反射机制允许用任意方法。[实例](methods/MethodTableTest.java)
+    JAVA提供接口来解决，反射机制允许用任意方法。
+[实例](methods/MethodTableTest.java)
 
 ### 5.8     继承的设计技巧
 
@@ -510,11 +512,55 @@ class Employee implements Comparable
     ✨在实现接口时，必须把方法声明为public；
     否则，编译器将认为这个方法的访问属性是包可见性，即类的默认访问属性，
     之后编译器就会给出试图提供更严格的访问权限的警告信息。
-=======
-    虚拟机为每个类型管理一个Class对象。
-=======
-=======
-    
->>>>>>> 3d666070f12e882672852ba862ad963bc1d92664
->>>>>>> 2e40c6a0eefec9b6d7d8787c79b4a0e8d2426fd9
->>>>>>> 271c099e2a0c85132cfa9b20556a427f538683ce
+
+### 6.1.2接口的特性
+
+    不能构造接口的对象，却能声明接口的变量
+    接口变量必须引用实现了接口的类对象
+```java
+Comoarable x; //声明接口的变量
+x = new Employee(...);  //口变量必须引用实现了接口的类对象
+if (anObject instanceof Comparable) {...}
+//可以使用instance检查一个对象是否实现了某个特定的接口
+
+//接口也可以被扩展。这里允许存在多条从具有较高通用性的接口到较高专用性的接口的链.
+public interface Moveable
+{
+    void move(double x, double y);
+}
+//扩展为Powered的接口
+public interface Powered extends Moveable
+{
+    double milesPerGallon(); 
+    //在接口中不能包含实例域或静态方法，但却可以包含常量
+    //接口中的域将被自动设为public static final
+}
+```
+
+### 6.1.3 接口与抽象类
+
+    使用抽象类表示通用属性存在这样一个问题：每个类只能扩展于一个类，有些程序设计语言允许一个类有多个超类，例如C++。我们将此特性称为多重继承，va的设计者选择了不支持多继承，其主要原因是多继承会让语言本身变得非常复杂（如同C++），效率也会降低
+
+### 6.1.4 静态方法
+
+    在Java SE 8中，允许在接口中增加静态方法。
+
+### 6.1.5 默认方法
+
+    必须用default修饰符标记这样一个方法。这些默认方法什么也不做。个接口的程序员只需要为他们真正关心的事件覆盖相应的监听器。
+
+### 6.1.6 解决默认方法冲突
+
+    1）超类优先。如果超类提供了一个具体方法，同名而且有相同参数类型的默认方法会被忽略
+    2）接口冲突。如果一个超接口提供了一个默认方法，另一个接口提供了一个同名而且参数类型（不论是否是默认参数）相同的方法，必须覆盖这个方法来解决冲突。
+
+[extends和implements区别](https://blog.csdn.net/qq_15037231/article/details/82813140)
+
+### 6.2.1 接口与回调
+
+    回调（callback）是一种常见的程序设计模式。在这种模式中，可以指出某个特定事件发生时应该采取的动作.
+
+
+
+
+

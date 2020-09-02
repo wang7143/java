@@ -1,4 +1,4 @@
-package interfaces;
+package examples.corejava10.v1ch06.interfaces;
 
 import java.util.*;
 

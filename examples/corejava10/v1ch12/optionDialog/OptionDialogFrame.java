@@ -1,4 +1,4 @@
-package optionDialog;
+package examples.corejava10.v1ch12.optionDialog;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -11,6 +11,10 @@ import javax.swing.*;
  */
 public class OptionDialogFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 231075052299122791L;
    private ButtonPanel typePanel;
    private ButtonPanel messagePanel;
    private ButtonPanel messageTypePanel;
@@ -139,6 +143,11 @@ public class OptionDialogFrame extends JFrame
 
 class SampleComponent extends JComponent
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 5587064828504617102L;
+
    public void paintComponent(Graphics g)
    {
       Graphics2D g2 = (Graphics2D) g;

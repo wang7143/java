@@ -1,4 +1,4 @@
-package groupLayout;
+package examples.corejava10.v1ch12.groupLayout;
 
 import java.awt.EventQueue;
 

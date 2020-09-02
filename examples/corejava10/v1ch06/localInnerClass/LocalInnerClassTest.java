@@ -1,4 +1,4 @@
-package localInnerClass;
+package examples.corejava10.v1ch06.localInnerClass;
 
 import java.awt.*;
 import java.awt.event.*;

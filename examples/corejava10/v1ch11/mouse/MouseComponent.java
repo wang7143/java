@@ -1,4 +1,4 @@
-package mouse;
+package examples.corejava10.v1ch11.mouse;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -11,6 +11,10 @@ import javax.swing.*;
  */
 public class MouseComponent extends JComponent
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -7855636902360656017L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;
 

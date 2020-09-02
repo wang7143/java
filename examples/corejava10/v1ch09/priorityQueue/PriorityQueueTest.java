@@ -1,4 +1,4 @@
-package priorityQueue;
+package examples.corejava10.v1ch09.priorityQueue;
 
 import java.util.*;
 import java.time.*;

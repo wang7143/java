@@ -1,4 +1,4 @@
-package notHelloWorld;
+package examples.corejava10.v1ch10.notHelloWorld;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,6 +26,11 @@ public class NotHelloWorld
  */
 class NotHelloWorldFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 3812935675391482022L;
+
    public NotHelloWorldFrame()
    {
       add(new NotHelloWorldComponent());
@@ -38,6 +43,10 @@ class NotHelloWorldFrame extends JFrame
  */
 class NotHelloWorldComponent extends JComponent
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 8759306472230652246L;
    public static final int MESSAGE_X = 75;
    public static final int MESSAGE_Y = 100;
 

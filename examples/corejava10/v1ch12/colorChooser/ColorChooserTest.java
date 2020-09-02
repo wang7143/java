@@ -1,4 +1,4 @@
-package colorChooser;
+package examples.corejava10.v1ch12.colorChooser;
 
 import java.awt.*;
 import javax.swing.*;

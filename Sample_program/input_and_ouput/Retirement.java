@@ -1,3 +1,5 @@
+package Sample_program.input_and_ouput;
+
 import java.util.*;
 
 
@@ -31,6 +33,7 @@ public class Retirement {
         }
 
         System.out.println("You can retire in " + years + " years");
+        in.close();
         
     }
 }

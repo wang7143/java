@@ -1,3 +1,5 @@
+package examples.corejava10.v1ch03.LotteryDrawing;
+
 import java.util.*;
 
 /**
@@ -17,6 +19,7 @@ public class LotteryDrawing
       System.out.print("What is the highest number you can draw? ");
       int n = in.nextInt();
 
+      in.close();
       // fill an array with numbers 1 2 3 . . . n
       int[] numbers = new int[n];
       for (int i = 0; i < numbers.length; i++)

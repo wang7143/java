@@ -1,4 +1,4 @@
-package circleLayout;
+package examples.corejava10.v1ch12.circleLayout;
 
 import javax.swing.*;
 
@@ -7,6 +7,11 @@ import javax.swing.*;
  */
 public class CircleLayoutFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
+
    public CircleLayoutFrame()
    {
       setLayout(new CircleLayout());

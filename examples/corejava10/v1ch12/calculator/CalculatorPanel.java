@@ -1,4 +1,4 @@
-package calculator;
+package examples.corejava10.v1ch12.calculator;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -9,6 +9,10 @@ import javax.swing.*;
  */
 public class CalculatorPanel extends JPanel
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 5617167282186853884L;
    private JButton display;
    private JPanel panel;
    private double result;

@@ -1,4 +1,4 @@
-package StaticTest;
+package Sample_program.input_and_ouput.StaticTest;
 
 
 public class StaticTest {
@@ -58,7 +58,7 @@ class Employee
 
     public static int getNextId()
     {
-        return nextId;  //rreturns static field
+        return nextId;  //returns static field
     }
 
     public static void main(String[] args) //unit test

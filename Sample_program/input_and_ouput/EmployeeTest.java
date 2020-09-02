@@ -1,3 +1,6 @@
+package Sample_program.input_and_ouput;
+
+
 import java.time.*;
 
 public class EmployeeTest {
@@ -12,7 +15,7 @@ public class EmployeeTest {
         for (Employee e : staff)
             e.raiseSalary(5);
         
-        // print out information about all Empoyee objects
+        // print out information about all Employee objects
         for (Employee e : staff)
             System.out.println("name=" + e.getName() + ",salary=" + e.getSalary() + ",hirDay=" + e.getHireDay());
     }

@@ -1,4 +1,4 @@
-package sizedFrame;
+package examples.corejava10.v1ch10.sizedFrame;
 
 import java.awt.*;
 import javax.swing.*;
@@ -23,6 +23,11 @@ public class SizedFrameTest
 
 class SizedFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 8648295437458127704L;
+
    public SizedFrame()
    {
       // get screen dimensions

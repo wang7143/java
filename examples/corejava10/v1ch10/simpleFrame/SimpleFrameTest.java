@@ -1,4 +1,4 @@
-package simpleFrame;
+package examples.corejava10.v1ch10.simpleFrame;
 
 import java.awt.*;
 import javax.swing.*;
@@ -22,6 +22,10 @@ public class SimpleFrameTest
 
 class SimpleFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 723924827404855657L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;
 

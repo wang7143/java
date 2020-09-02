@@ -1,4 +1,4 @@
-package lambda;
+package examples.corejava10.v1ch06.lambda;
 
 import java.util.*;
 

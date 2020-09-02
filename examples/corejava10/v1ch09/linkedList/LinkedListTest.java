@@ -1,4 +1,4 @@
-package linkedList;
+package examples.corejava10.v1ch09.linkedList;
 
 import java.util.*;
 

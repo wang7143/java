@@ -1,4 +1,4 @@
-
+package Sample_program.input_and_ouput;
 
 public class LotteryArray {
     public static void main(String[] args) {

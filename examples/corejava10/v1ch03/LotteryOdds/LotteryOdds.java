@@ -1,3 +1,4 @@
+package examples.corejava10.v1ch03.LotteryOdds;
 import java.util.*;
 
 /**
@@ -26,5 +27,6 @@ public class LotteryOdds
          lotteryOdds = lotteryOdds * (n - i + 1) / i;
 
       System.out.println("Your odds are 1 in " + lotteryOdds + ". Good luck!");
+      in.close();
    }
 }

@@ -1,4 +1,4 @@
-package ConstructorTest;
+package Sample_program.input_and_ouput.ConstructorTest;
 
 import java.util.*;
 
@@ -39,7 +39,7 @@ class Employee
         nextId++;
     }
 
-    //therr overloaded constructors
+    //there overloaded constructors
     public Employee(String n, double s)
     {
         name = n;

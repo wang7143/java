@@ -1,4 +1,4 @@
-package robot;
+package examples.corejava10.v1ch12.robot;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -66,6 +66,7 @@ public class RobotTest
       // simulate a mouse click over the rightmost button
       robot.delay(2000);
       robot.mouseMove(220, 40);
+      
       robot.mousePress(InputEvent.BUTTON1_MASK);
       robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
@@ -83,6 +84,10 @@ public class RobotTest
  */
 class ImageFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -3368531709726199339L;
    private static final int DEFAULT_WIDTH = 450;
    private static final int DEFAULT_HEIGHT = 350;
 

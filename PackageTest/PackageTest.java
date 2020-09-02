@@ -1,6 +1,6 @@
-// package PackageTest;
+package PackageTest;
 
-import com.horstmann.corejava.Employee;
+import PackageTest.com.horstmann.corejava.Employee;
 import static java.lang.System.*;
 
 
@@ -12,7 +12,7 @@ public class PackageTest {
 
         harry.raiseSalary(5);
 
-        //bacause of the static import statement, we don't have to use System.out here
+        //because of the static import statement, we don't have to use System.out here
         out.println("name=" + harry.getName() + ",salary=" + harry.getSalary());
     }
 }

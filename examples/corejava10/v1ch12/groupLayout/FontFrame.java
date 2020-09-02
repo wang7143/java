@@ -1,4 +1,4 @@
-package groupLayout;
+package examples.corejava10.v1ch12.groupLayout;
 
 import java.awt.Font;
 import java.awt.event.ActionListener;
@@ -19,7 +19,11 @@ import javax.swing.SwingConstants;
  */
 public class FontFrame extends JFrame
 {
-   public static final int TEXT_ROWS = 10;
+      /**
+       *
+       */
+      private static final long serialVersionUID = 8099573394154074164L;
+      public static final int TEXT_ROWS = 10;
    public static final int TEXT_COLUMNS = 20;
 
    private JComboBox<String> face;

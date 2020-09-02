@@ -1,3 +1,5 @@
+package examples.corejava10.v1ch02.Welcome;
+
 /**
  * This program displays a greeting for the reader.
  * @version 1.30 2014-02-27

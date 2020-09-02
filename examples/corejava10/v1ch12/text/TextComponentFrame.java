@@ -1,4 +1,4 @@
-package text;
+package examples.corejava10.v1ch12.text;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -18,6 +18,10 @@ import javax.swing.SwingConstants;
  */
 public class TextComponentFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 634638723828592980L;
    public static final int TEXTAREA_ROWS = 8;
    public static final int TEXTAREA_COLUMNS = 20;
 

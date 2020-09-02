@@ -1,4 +1,4 @@
-package listFonts;
+package examples.corejava10.v1ch10.listFonts;
 
 import java.awt.*;
 

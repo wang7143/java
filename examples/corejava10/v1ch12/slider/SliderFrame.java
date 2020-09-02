@@ -1,4 +1,4 @@
-package slider;
+package examples.corejava10.v1ch12.slider;
 
 import java.awt.*;
 import java.util.*;
@@ -10,6 +10,10 @@ import javax.swing.event.*;
  */
 public class SliderFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -7292243832725927058L;
    private JPanel sliderPanel;
    private JTextField textField;
    private ChangeListener listener;

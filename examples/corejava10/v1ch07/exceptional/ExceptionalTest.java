@@ -1,4 +1,4 @@
-package exceptional;
+package examples.corejava10.v1ch07.exceptional;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package gridbag;
+package examples.corejava10.v1ch12.gridbag;
 
 import java.awt.Font;
 import java.awt.GridBagLayout;
@@ -16,7 +16,11 @@ import javax.swing.JTextArea;
  */
 public class FontFrame extends JFrame
 {
-   public static final int TEXT_ROWS = 10;
+      /**
+       *
+       */
+      private static final long serialVersionUID = -1368128212520040247L;
+      public static final int TEXT_ROWS = 10;
    public static final int TEXT_COLUMNS = 20;
 
    private JComboBox<String> face;

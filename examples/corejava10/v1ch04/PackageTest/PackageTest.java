@@ -1,6 +1,7 @@
-import com.horstmann.corejava.*;
+package examples.corejava10.v1ch04.PackageTest;
 // the Employee class is defined in that package
 
+import PackageTest.com.horstmann.corejava.*;
 import static java.lang.System.*;
 
 /**

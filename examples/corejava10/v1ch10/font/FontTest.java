@@ -1,4 +1,4 @@
-package font;
+package examples.corejava10.v1ch10.font;
 
 import java.awt.*;
 import java.awt.font.*;
@@ -28,6 +28,11 @@ public class FontTest
  */
 class FontFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 3282036746309877308L;
+
    public FontFrame()
    {      
       add(new FontComponent());
@@ -40,6 +45,10 @@ class FontFrame extends JFrame
  */
 class FontComponent extends JComponent
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -2810254807111994377L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;
 

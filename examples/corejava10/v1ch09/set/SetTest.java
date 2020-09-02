@@ -1,4 +1,4 @@
-package set;
+package examples.corejava10.v1ch09.set;
 
 import java.util.*;
 

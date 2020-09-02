@@ -1,4 +1,4 @@
-package pair1;
+package examples.corejava10.v1ch08.pair1;
 
 /**
  * @version 1.01 2012-01-26

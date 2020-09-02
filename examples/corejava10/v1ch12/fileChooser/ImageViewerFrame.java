@@ -1,4 +1,4 @@
-package fileChooser;
+package examples.corejava10.v1ch12.fileChooser;
 
 import java.io.*;
 
@@ -12,6 +12,10 @@ import javax.swing.filechooser.FileFilter;
  */
 public class ImageViewerFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -1104320207327858896L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 400;
    private JLabel label;

@@ -1,4 +1,4 @@
-package ParamTest;
+package Sample_program.input_and_ouput.ParamTest;
 
 public class ParamTest {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class ParamTest {
         System.out.println("After: percent=" + percent);
 
         // Test 2: Methods can change the state of object parameters
-        System.out.println("\nTesting trepleSalary:");
+        System.out.println("\nTesting trebleSalary:");
         Employee harry = new Employee("Harry", 50000);
         System.out.println("Before: salary=" + harry.getSalary());
         tripleSalary(harry);

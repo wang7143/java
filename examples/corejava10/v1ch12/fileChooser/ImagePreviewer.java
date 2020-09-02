@@ -1,4 +1,4 @@
-package fileChooser;
+package examples.corejava10.v1ch12.fileChooser;
 
 import java.awt.*;
 import java.io.*;
@@ -11,9 +11,15 @@ import javax.swing.*;
 public class ImagePreviewer extends JLabel
 {
    /**
+    *
+    */
+   private static final long serialVersionUID = 5431454126440331359L;
+
+   /**
     * Constructs an ImagePreviewer.
+    * 
     * @param chooser the file chooser whose property changes trigger an image
-    *        change in this previewer
+    *                change in this previewer
     */
    public ImagePreviewer(JFileChooser chooser)
    {

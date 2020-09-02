@@ -1,4 +1,4 @@
-package dialog;
+package examples.corejava10.v1ch12.dialog;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -10,6 +10,10 @@ import javax.swing.JMenuItem;
  */
 public class DialogFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -8574732073303882663L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;
    private AboutDialog dialog;

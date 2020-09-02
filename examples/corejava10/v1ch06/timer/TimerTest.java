@@ -1,4 +1,4 @@
-package timer;
+package examples.corejava10.v1ch06.timer;
 
 /**
    @version 1.01 2015-05-12

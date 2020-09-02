@@ -1,3 +1,5 @@
+package examples.corejava10.v1ch03.Retirement2;
+
 import java.util.*;
 
 /**
@@ -40,5 +42,6 @@ public class Retirement2
          input = in.next();
       }
       while (input.equals("N"));
+      in.close();
    }
 }

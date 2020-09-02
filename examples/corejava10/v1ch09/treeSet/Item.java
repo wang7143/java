@@ -1,4 +1,4 @@
-package treeSet;
+package examples.corejava10.v1ch09.treeSet;
 
 import java.util.*;
 
@@ -36,7 +36,7 @@ public class Item implements Comparable<Item>
 
    public String toString()
    {
-      return "[descripion=" + description + ", partNumber=" + partNumber + "]";
+      return "[description=" + description + ", partNumber=" + partNumber + "]";
    }
 
    public boolean equals(Object otherObject)

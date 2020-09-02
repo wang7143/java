@@ -1,4 +1,4 @@
-package optionDialog;
+package examples.corejava10.v1ch12.optionDialog;
 
 import javax.swing.*;
 
@@ -7,6 +7,10 @@ import javax.swing.*;
  */
 public class ButtonPanel extends JPanel
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -8224138646123512632L;
    private ButtonGroup group;
 
    /**

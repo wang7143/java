@@ -1,4 +1,4 @@
-package optionDialog;
+package examples.corejava10.v1ch12.optionDialog;
 
 import java.awt.*;
 import javax.swing.*;

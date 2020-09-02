@@ -1,4 +1,4 @@
-package radioButton;
+package examples.corejava10.v1ch12.radioButton;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -9,6 +9,10 @@ import javax.swing.*;
  */
 public class RadioButtonFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 738318736843022905L;
    private JPanel buttonPanel;
    private ButtonGroup group;
    private JLabel label;

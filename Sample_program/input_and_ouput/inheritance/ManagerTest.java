@@ -1,4 +1,4 @@
-package inheritance;
+package Sample_program.input_and_ouput.inheritance;
 
 public class ManagerTest
 {
@@ -9,7 +9,7 @@ public class ManagerTest
 
         Employee[] staff = new Employee[3];
 
-        //fill the staff array with Maanager and Employee objects
+        //fill the staff array with Manager and Employee objects
 
         staff[0] = boss;
         staff[1] = new Employee("Harry Hacker", 50000, 1989, 10, 1);

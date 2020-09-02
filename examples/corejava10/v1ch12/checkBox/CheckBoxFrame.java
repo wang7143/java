@@ -1,4 +1,4 @@
-package checkBox;
+package examples.corejava10.v1ch12.checkBox;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -10,6 +10,10 @@ import javax.swing.*;
  */
 public class CheckBoxFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -1567402713547976830L;
    private JLabel label;
    private JCheckBox bold;
    private JCheckBox italic;

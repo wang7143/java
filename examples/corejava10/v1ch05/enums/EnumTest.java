@@ -1,4 +1,4 @@
-package enums;
+package examples.corejava10.v1ch05.enums;
 
 import java.util.*;
 
@@ -18,7 +18,8 @@ public class EnumTest
       System.out.println("size=" + size);
       System.out.println("abbreviation=" + size.getAbbreviation());
       if (size == Size.EXTRA_LARGE)
-         System.out.println("Good job--you paid attention to the _.");      
+         System.out.println("Good job--you paid attention to the _."); 
+      in.close();     
    }
 }
 

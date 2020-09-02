@@ -1,4 +1,4 @@
-package inheritance;
+package Sample_program.input_and_ouput.inheritance;
 
 import java.time.*;
 

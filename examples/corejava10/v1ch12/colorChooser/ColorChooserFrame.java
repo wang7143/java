@@ -1,4 +1,4 @@
-package colorChooser;
+package examples.corejava10.v1ch12.colorChooser;
 
 import javax.swing.*;
 
@@ -7,6 +7,10 @@ import javax.swing.*;
  */
 public class ColorChooserFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -2849296507049340152L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;
 

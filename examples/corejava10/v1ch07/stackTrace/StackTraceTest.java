@@ -1,4 +1,4 @@
-package stackTrace;
+package examples.corejava10.v1ch07.stackTrace;
 
 import java.util.*;
 
@@ -34,5 +34,6 @@ public class StackTraceTest
       System.out.print("Enter n: ");
       int n = in.nextInt();
       factorial(n);
+      in.close();
    }
 }

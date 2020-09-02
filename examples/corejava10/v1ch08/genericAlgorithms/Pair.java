@@ -1,4 +1,4 @@
-package genericAlgorithms;
+package examples.corejava10.v1ch08.genericAlgorithms;
 
 import java.util.function.Supplier;
 
@@ -29,7 +29,7 @@ public class Pair<T>
    
    public static <T> Pair<T> makePair(Class<T> cl)
    {
-      try { return new Pair<>(cl.newInstance(), cl.newInstance()); }
+      try { return new Pair<>(cl.getDeclaredConstructor().newInstance(),cl.getDeclaredConstructor().newInstance()); }
       catch (Exception ex) { return null; }
    }        
 }

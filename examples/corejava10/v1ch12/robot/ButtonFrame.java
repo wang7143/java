@@ -1,4 +1,4 @@
-package robot;
+package examples.corejava10.v1ch12.robot;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -9,6 +9,10 @@ import javax.swing.*;
  */
 public class ButtonFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -8270621192474495175L;
    private JPanel buttonPanel;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;

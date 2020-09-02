@@ -1,4 +1,4 @@
-package action;
+package examples.corejava10.v1ch11.action;
 
 import java.awt.*;
 import javax.swing.*;

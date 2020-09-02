@@ -1,10 +1,13 @@
+package examples.corejava10.v1ch02.RoadApplet;
+
 import java.awt.*;
 import java.awt.image.*;
 import javax.swing.*;
 
 public class RoadComponent extends JComponent
 {  
-   private final int DOTSIZE = 2;   
+   private static final long serialVersionUID = 1L;
+   private final int DOTSIZE = 2;
    private final int XDOTDIST = 1;
    private Road freeway;
    private BufferedImage buffer;

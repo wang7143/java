@@ -1,4 +1,4 @@
-package colorChooser;
+package examples.corejava10.v1ch12.colorChooser;
 
 import java.awt.Color;
 import java.awt.Frame;
@@ -15,6 +15,11 @@ import javax.swing.JPanel;
  */
 public class ColorChooserPanel extends JPanel
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 6811722065359808685L;
+
    public ColorChooserPanel()
    {
       JButton modalButton = new JButton("Modal");

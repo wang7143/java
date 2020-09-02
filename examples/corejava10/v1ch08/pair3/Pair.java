@@ -1,4 +1,4 @@
-package pair3;
+package examples.corejava10.v1ch08.pair3;
 
 /**
  * @version 1.00 2004-05-10

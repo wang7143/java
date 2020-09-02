@@ -1,4 +1,4 @@
-package mouse;
+package examples.corejava10.v1ch11.mouse;
 
 import javax.swing.*;
 
@@ -7,6 +7,11 @@ import javax.swing.*;
  */
 public class MouseFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 7642670425233151449L;
+
    public MouseFrame()
    {
       add(new MouseComponent());

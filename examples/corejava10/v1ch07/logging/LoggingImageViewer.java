@@ -1,4 +1,4 @@
-package logging;
+package examples.corejava10.v1ch07.logging;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -53,6 +53,10 @@ public class LoggingImageViewer
  */
 class ImageViewerFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 400;   
 

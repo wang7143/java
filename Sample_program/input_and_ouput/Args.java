@@ -1,4 +1,4 @@
-import java.util.*;
+package Sample_program.input_and_ouput;
 
 public class Args {
     public static void main(String[] args) {

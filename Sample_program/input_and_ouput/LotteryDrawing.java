@@ -1,3 +1,5 @@
+package Sample_program.input_and_ouput;
+
 import java.util.Arrays;
 import java.util.Scanner;
 

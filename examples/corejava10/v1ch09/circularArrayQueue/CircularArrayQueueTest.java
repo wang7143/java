@@ -1,4 +1,4 @@
-package circularArrayQueue;
+package examples.corejava10.v1ch09.circularArrayQueue;
 
 import java.util.*;
 

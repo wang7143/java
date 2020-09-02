@@ -1,4 +1,4 @@
-package draw;
+package examples.corejava10.v1ch10.draw;
 
 import java.awt.*;
 import java.awt.geom.*;
@@ -27,6 +27,11 @@ public class DrawTest
  */
 class DrawFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 5053685327000758641L;
+
    public DrawFrame()
    {      
       add(new DrawComponent());
@@ -39,6 +44,10 @@ class DrawFrame extends JFrame
  */
 class DrawComponent extends JComponent
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -6320495815348426880L;
    private static final int DEFAULT_WIDTH = 400;
    private static final int DEFAULT_HEIGHT = 400;
 

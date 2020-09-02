@@ -1,4 +1,4 @@
-package dataExchange;
+package examples.corejava10.v1ch12.dataExchange;
 
 import java.awt.*;
 import javax.swing.*;

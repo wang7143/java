@@ -1,4 +1,4 @@
-package gridbag;
+package examples.corejava10.v1ch12.gridbag;
 
 import java.awt.EventQueue;
 

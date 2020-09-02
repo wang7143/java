@@ -1,4 +1,4 @@
-package interfaces;
+package examples.corejava10.v1ch06.interfaces;
 
 public class Employee implements Comparable<Employee>
 {

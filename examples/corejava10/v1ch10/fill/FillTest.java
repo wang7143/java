@@ -1,4 +1,4 @@
-package fill;
+package examples.corejava10.v1ch10.fill;
 
 import java.awt.*;
 import java.awt.geom.*;
@@ -27,6 +27,11 @@ public class FillTest
  */
 class FillFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1348093550430798746L;
+
    public FillFrame()
    {
       add(new FillComponent());
@@ -39,6 +44,10 @@ class FillFrame extends JFrame
  */
 class FillComponent extends JComponent
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -1823150448350033018L;
    private static final int DEFAULT_WIDTH = 400;
    private static final int DEFAULT_HEIGHT = 400;
 

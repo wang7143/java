@@ -1,4 +1,4 @@
-package button;
+package examples.corejava10.v1ch11.button;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -9,6 +9,10 @@ import javax.swing.*;
  */
 public class ButtonFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 3968229813394804345L;
    private JPanel buttonPanel;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;

@@ -1,4 +1,4 @@
-package gridbag;
+package examples.corejava10.v1ch12.gridbag;
 
 import java.awt.*;
 
@@ -10,8 +10,14 @@ import java.awt.*;
 public class GBC extends GridBagConstraints
 {
    /**
-    * Constructs a GBC with a given gridx and gridy position and all other grid
-    * bag constraint values set to the default.
+    *
+    */
+   private static final long serialVersionUID = -8689921866086413898L;
+
+   /**
+    * Constructs a GBC with a given gridx and gridy position and all other grid bag
+    * constraint values set to the default.
+    * 
     * @param gridx the gridx position
     * @param gridy the gridy position
     */

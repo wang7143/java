@@ -1,3 +1,5 @@
+package examples.corejava10.v1ch03.BigIntegerTest;
+
 import java.math.*;
 import java.util.*;
 
@@ -29,5 +31,6 @@ public class BigIntegerTest
                BigInteger.valueOf(i));
 
       System.out.println("Your odds are 1 in " + lotteryOdds + ". Good luck!");
+      in.close();
    }
 }

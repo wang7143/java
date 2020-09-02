@@ -1,4 +1,4 @@
-package plaf;
+package examples.corejava10.v1ch11.plaf;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -11,6 +11,10 @@ import javax.swing.UIManager;
  */
 public class PlafFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -2747856162413579478L;
    private JPanel buttonPanel;
 
    public PlafFrame()

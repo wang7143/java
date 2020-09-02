@@ -1,4 +1,4 @@
-package dialog;
+package examples.corejava10.v1ch12.dialog;
 
 import java.awt.*;
 import javax.swing.*;

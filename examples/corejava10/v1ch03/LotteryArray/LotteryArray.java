@@ -1,3 +1,6 @@
+
+package examples.corejava10.v1ch03.LotteryArray;
+
 /**
  * This program demonstrates a triangular array.
  * @version 1.20 2004-02-10

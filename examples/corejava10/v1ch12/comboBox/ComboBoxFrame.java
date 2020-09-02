@@ -1,4 +1,4 @@
-package comboBox;
+package examples.corejava10.v1ch12.comboBox;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -13,6 +13,10 @@ import javax.swing.JPanel;
  */
 public class ComboBoxFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -4326360093904639919L;
    private JComboBox<String> faceCombo;
    private JLabel label;
    private static final int DEFAULT_SIZE = 24;

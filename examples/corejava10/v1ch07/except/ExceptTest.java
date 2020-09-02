@@ -1,4 +1,4 @@
-package except;
+package examples.corejava10.v1ch07.except;
 
 import java.awt.EventQueue;
 import java.awt.event.*;
@@ -30,6 +30,11 @@ public class ExceptTest
  */
 class ExceptTestFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
+
    public ExceptTestFrame()
    {
       ExceptTestPanel panel = new ExceptTestPanel();
@@ -43,6 +48,10 @@ class ExceptTestFrame extends JFrame
  */
 class ExceptTestPanel extends Box
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -3601619958387346079L;
    private ButtonGroup group;
    private JTextField textField;
    private double[] a = new double[10];
@@ -118,8 +127,9 @@ class ExceptTestPanel extends Box
             {
                try
                {
-                  System.out.println(
-                     new Scanner(Paths.get("woozle.txt"), "UTF-8").next());
+                  Scanner sc = new Scanner(Paths.get("woozle.txt"), "UTF-8");
+                  System.out.println(sc.next());
+                  sc.close();
                }
                catch (IOException e)
                {
@@ -151,7 +161,12 @@ class ExceptTestPanel extends Box
    {
       JRadioButton button = new JRadioButton(s, false)
          {
-            // the button calls this method to fire an
+            /**
+          *
+          */
+         private static final long serialVersionUID = 1L;
+
+         // the button calls this method to fire an
             // action event. We override it to trap exceptions
             protected void fireActionPerformed(ActionEvent event)
             {

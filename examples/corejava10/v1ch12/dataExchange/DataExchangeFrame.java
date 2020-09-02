@@ -1,4 +1,4 @@
-package dataExchange;
+package examples.corejava10.v1ch12.dataExchange;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -9,6 +9,10 @@ import javax.swing.*;
  */
 public class DataExchangeFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -5508371519790442856L;
    public static final int TEXT_ROWS = 20;
    public static final int TEXT_COLUMNS = 40;
    private PasswordChooser dialog = null;

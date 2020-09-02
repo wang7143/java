@@ -1,4 +1,4 @@
-package equals;
+package examples.corejava10.v1ch05.equals;
 
 public class Manager extends Employee
 {

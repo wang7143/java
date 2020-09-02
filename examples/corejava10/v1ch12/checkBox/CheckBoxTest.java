@@ -1,4 +1,4 @@
-package checkBox;
+package examples.corejava10.v1ch12.checkBox;
 
 import java.awt.*;
 import javax.swing.*;
