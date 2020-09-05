@@ -559,8 +559,97 @@ public interface Powered extends Moveable
 ### 6.2.1 接口与回调
 
     回调（callback）是一种常见的程序设计模式。在这种模式中，可以指出某个特定事件发生时应该采取的动作.
+[实例](timer/TimerTest.java)
+
+### 6.2.2 Comparator接口
+
+### 6.2.3 对象克隆
+    
+    clone方法是Object的一个protected方法，这说明你的代码不能直接调用这个方法.只有Employee类可以克隆Employee对象.
+    对于每一个类，需要确定：
+        1）默认的clone方法是否满足要求；
+        2）是否可以在可变的子对象上调用clone来修补默认的clone方法；
+        3）是否不该使用clone。
+    实际上第3个选项是默认选项。如果选择第1项或第2项，类必须：
+        1）实现Cloneable接口；
+        2）重新定义clone方法，并指定public访问修饰符。
+
+<font color=red>
+Object类中clone方法声明为protected，所以你的代码不能直接调用anObject.clone（）
+
+子类只能调用受保护的clone方法来克隆它自己的对象。必须重新定义clone为public才能允许所有方法克隆对象。
+
+Cloneable接口的出现与接口的正常使用并没有关系。具体来说，它没有指定clone方法，这个方法是从Object类继承的。这个接口只是作为一个标记，指示类设计者了解克隆过程。对象对于克隆很“偏执”，如果一个对象请求克隆，但没有实现这个接口，就会生成一个受查异常。
+
+所有数组类型都有一个public的clone方法，而不是protected。可以用这个方法建立一个新数组，包含原数组所有元素的副本。
+</font>
+[实例](clone/CloneTest.java)
 
 
+### 6.3 lambda表达式
 
+    lambda表达式是一个可传递的代码块，可以在以后执行一次或多次。
+    
+### 6.3.2 lambda表达式的语法
 
+    无需指定lambda表达式的返回类型。lambda表达式的返回类型总是会由上下文推导得出。
 
+### 6.3.3 函数式接口
+
+    对于只有一个抽象方法的接口，需要这种接口的对象时，就可以提供一个lambda表达式。这种接口称为函数式接口（functional interface）。
+
+    不能把lambda表达式赋给类型为Object的变量，Object不是一个函数式接口
+[函数式接口](https://blog.csdn.net/fdlhei/article/details/100007966)。
+
+### 6.3.4 方法引用
+
+```java
+    Time t = new Timer(1000, event -> System.out.printIn(event));
+    //等价于 🔽
+    Time t = new Timer(1000, System.out::printIn);
+    //System.out::printIn == x->System.out.println（x）
+    //要用：：操作符分隔方法名与对象或类名
+    
+    //第二种情况，方法引用等价于提供方法参数的lambda表达式
+    //Math：：pow等价于（x，y）->Math.pow（x，y）。
+
+    //第3种情况，第1个参数会成为方法的目标
+    //String：：compareToIgnoreCase等同于（x，y）->x.compareToIgnoreCase（y）
+
+    //可以在方法引用中使用this参数。例如，this：：equals等同于x->this.equals（x）。使用super也是合法的。下面的方法表达式
+```
+
+### 6.3.5 构造器引用
+
+    构造器引用与方法引用很类似，只不过方法名为new。例如，Person：：new是Person构造器的一个引用。
+
+    可以用数组类型建立构造器引用。例如，int[]：：new是一个构造器引用，它有一个参数：即数组的长度。这等价于lambda表达式x->new int[x]。
+
+    Java有一个限制，无法构造泛型类型T的数组。
+
+### 6.3.6 变量作用域
+
+    固我们对lambda表达式的理解。lambda表达式有3个部分：
+    1）一个代码块；
+    2）参数；
+    3）自由变量的值，这是指非参数而且不在代码中定义的变量。
+    关于代码块以及自由变量值有一个术语：闭包（closure）。在Java中，lambda表达式就是闭包。
+
+    lambda表达式可以捕获外围作用域中变量的值。在Java中，要确保所捕获的值是明确定义的，这里有一个重要的限制。
+
+    这里有一条规则：lambda表达式中捕获的变量必须实际上是最终变量，上的最终变量是指，这个变量初始化之后就不会再为它赋新值。
+    
+    在lambda表达式中声明与一个局部变量同名的参数或局部变量是不合法的。
+    lambda表达式的作用域嵌套在init方法中
+
+### 6.3.7 处理lambda表达式
+
+    使用lambda表达式的重点是延迟执行（deferred execution）
+    如果设计你自己的接口，其中只有一个抽象方法，可以用@FunctionalInterface注解来标记这个接口。这样做有两个优点。如果你无意中增加了另一个非抽象方法，编译器会产生一个错误消息。另外javadoc页里会指出你的接口是一个函数式接口。
+
+    根据定义，任何有一个抽象方法的接口都是函数式接口
+
+### 在谈Comparator
+
+    Comparator接口包含很多方便的静态方法来创建比较器。这些方法可以用于lambda表达式或方法引用。
+    
