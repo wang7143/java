@@ -41,6 +41,7 @@
 [连接](https://www.cnblogs.com/wang-yaz/p/8516151.html)
 
 
+### String是引用类型
 
 
 

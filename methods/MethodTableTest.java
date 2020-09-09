@@ -22,6 +22,7 @@ public class MethodTableTest {
 
         printTable(1, 10, 10, square);
         printTable(1, 10, 10, sqrt);
+        
     }
 
     /**
