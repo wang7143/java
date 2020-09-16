@@ -1,4 +1,4 @@
-package webstart;
+package examples.corejava10.v1ch13.webstart;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -9,7 +9,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import javax.jnlp.BasicService;

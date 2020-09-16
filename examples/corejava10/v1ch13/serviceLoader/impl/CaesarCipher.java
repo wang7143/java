@@ -1,6 +1,6 @@
-package serviceLoader.impl;
+package examples.corejava10.v1ch13.serviceLoader.impl;
 
-import serviceLoader.Cipher;
+import examples.corejava10.v1ch13.serviceLoader.Cipher;
 
 public class CaesarCipher implements Cipher
 {

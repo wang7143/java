@@ -22,7 +22,7 @@ public class CopyofTest {
     }
     /**
      * This method attempts to grow array by allocating a new array and copying all elements.
-     * @param a the array to grow
+     * @param a the array to grow 
      * 
      * @param newLength the new length
      * @return a larger array that contains all elements of a. However, the returned array has type Object[], not the same type as a
@@ -48,5 +48,8 @@ public class CopyofTest {
         Object newArray = Array.newInstance(componentType, newLength);  //newInstance()是Array类中静态方法，能构造新数组，参数是元素类型，数组的长度
         System.arraycopy(a, 0, newArray, 0, Math.min(length, newLength));
         return newArray;
+        
+        
+
     }
 }

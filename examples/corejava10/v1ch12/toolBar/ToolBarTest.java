@@ -1,4 +1,4 @@
-package toolBar;
+package examples.corejava10.v1ch12.toolBar;
 
 import java.awt.*;
 import javax.swing.*;

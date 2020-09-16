@@ -1,4 +1,4 @@
-package toolBar;
+package examples.corejava10.v1ch12.toolBar;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -9,6 +9,10 @@ import javax.swing.*;
  */
 public class ToolBarFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;
    private JPanel panel;
@@ -31,7 +35,12 @@ public class ToolBarFrame extends JFrame
 
       Action exitAction = new AbstractAction("Exit", new ImageIcon("exit.gif"))
          {
-            public void actionPerformed(ActionEvent event)
+            /**
+          *
+          */
+         private static final long serialVersionUID = 1L;
+
+         public void actionPerformed(ActionEvent event)
             {
                System.exit(0);
             }
@@ -65,6 +74,11 @@ public class ToolBarFrame extends JFrame
     */
    class ColorAction extends AbstractAction
    {
+      /**
+      *
+      */
+      private static final long serialVersionUID = 1L;
+
       public ColorAction(String name, Icon icon, Color c)
       {
          putValue(Action.NAME, name);

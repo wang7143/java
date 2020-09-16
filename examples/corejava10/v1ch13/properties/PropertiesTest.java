@@ -1,4 +1,4 @@
-package properties;
+package examples.corejava10.v1ch13.properties;
 
 import java.awt.EventQueue;
 import java.awt.event.*;
@@ -30,6 +30,10 @@ public class PropertiesTest
  */
 class PropertiesFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 200;
 

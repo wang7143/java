@@ -1,4 +1,4 @@
-package bounce;
+package examples.corejava10.v1ch14.bounce;
 
 import java.awt.geom.*;
 

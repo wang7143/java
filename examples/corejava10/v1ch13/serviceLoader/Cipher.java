@@ -1,4 +1,4 @@
-package serviceLoader;
+package examples.corejava10.v1ch13.serviceLoader;
 
 public interface Cipher
 {

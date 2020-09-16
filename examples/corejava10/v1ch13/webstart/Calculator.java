@@ -1,4 +1,4 @@
-package webstart;
+package examples.corejava10.v1ch13.webstart;
 
 import java.awt.*;
 import javax.swing.*;

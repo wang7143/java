@@ -1,4 +1,4 @@
-package text;
+package examples.corejava10.v1ch12.text;
 
 import java.awt.*;
 import javax.swing.*;

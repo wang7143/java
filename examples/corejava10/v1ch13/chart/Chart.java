@@ -1,4 +1,4 @@
-package chart;
+package examples.corejava10.v1ch13.chart;
 
 import java.awt.*;
 import java.awt.font.*;
@@ -11,6 +11,11 @@ import javax.swing.*;
  */
 public class Chart extends JApplet
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
+
    public void init()
    {
       EventQueue.invokeLater(() -> {

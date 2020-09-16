@@ -1,4 +1,4 @@
-package resource;
+package examples.corejava10.v1ch13.resource;
 
 import java.awt.*;
 import java.io.*;
@@ -28,6 +28,10 @@ public class ResourceTest
  */
 class ResourceTestFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
    private static final int DEFAULT_WIDTH = 300;
    private static final int DEFAULT_HEIGHT = 300;
 

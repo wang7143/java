@@ -1,4 +1,4 @@
-package systemInfo;
+package examples.corejava10.v1ch13.systemInfo;
 
 import java.io.*;
 import java.util.*;

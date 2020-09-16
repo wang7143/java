@@ -1,4 +1,4 @@
-package webstart;
+package examples.corejava10.v1ch13.webstart;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -10,6 +10,10 @@ import javax.swing.text.*;
 */
 public class CalculatorPanel extends JPanel
 {  
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
    private JTextArea display;
    private JPanel panel;
    private double result;
