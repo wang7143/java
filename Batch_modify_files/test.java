@@ -7,7 +7,6 @@ import java.util.LinkedList;
 public class test {
     public static void main(String[] args) {
         // create_folder();
-        File name = new File("file1");
         // create_file(name);
         enum_all_files();
     }

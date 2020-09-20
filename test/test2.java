@@ -14,6 +14,8 @@ public class test2 {
         System.out.println("第三个数");
         int num3 = scan.nextInt();
 
+        scan.close();
+
         int num4 = (num1 > num2) ? ((num1 > num3) ? num1 : num3):((num2 > num3) ? num2 : num3);
         if (num4 != num1){
             System.out.println(num4 + ',' + num1);

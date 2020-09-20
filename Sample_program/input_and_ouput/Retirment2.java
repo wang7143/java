@@ -12,7 +12,6 @@ public class Retirment2 {
         double InterestRate = in.nextDouble();
 
         double balance = 0;
-        int year = 0;
 
         String input;
 
@@ -23,7 +22,7 @@ public class Retirment2 {
             balance += payment;
             double interest = balance * InterestRate / 100;
             balance += interest;
-            year++;
+
 
             //print current balance
             System.out.print("Ready to retire? (Y/N) ");

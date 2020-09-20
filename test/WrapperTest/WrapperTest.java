@@ -7,7 +7,7 @@ public class WrapperTest {
     @Test
     public void test1() {
         int num1 = 10;
-        Integer in1 = 10;
+        Integer in1 = num1;
         System.out.println(in1);
 
     }

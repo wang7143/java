@@ -5,10 +5,9 @@ public enum Meal{
     MAINCOURSE(Food.MainCourse.class),
     DESSERT(Food.Dessert.class),
     COFFEE(Food.Coffee.class);
-    private Food[] values;
-    private Meal(Class<? extends Food> kind) {
-      //通过class对象获取枚举实例
-      values = kind.getEnumConstants();
+    
+  private Meal(Class<? extends Food> kind) {
+    kind.getEnumConstants();
     }
     public interface Food {
       enum Appetizer implements Food {
