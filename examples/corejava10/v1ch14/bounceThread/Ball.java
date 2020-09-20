@@ -1,4 +1,4 @@
-package bounceThread;
+package examples.corejava10.v1ch14.bounceThread;
 
 import java.awt.geom.*;
 

@@ -1,4 +1,4 @@
-package bounce;
+package examples.corejava10.v1ch14.bounce;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -26,6 +26,10 @@ public class Bounce
  */
 class BounceFrame extends JFrame
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = -6713570411993832215L;
    private BallComponent comp;
    public static final int STEPS = 1000;
    public static final int DELAY = 3;
