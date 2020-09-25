@@ -2,10 +2,23 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TeamView",
+            "request": "launch",
+            "mainClass": "test.project3.TeamView",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "mainClass": "test.Solution",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - singleton",
             "request": "launch",
             "mainClass": "test.singleton.singleton",
-            "args": "123",
             "projectName": "java_d0bf9549"
         },
         {

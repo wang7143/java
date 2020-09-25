@@ -17,7 +17,7 @@ class Order {
     }
 
     /**
-     * 
+     *  
      */
     private static Order instance = null;
 
