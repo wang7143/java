@@ -2,6 +2,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - LockTest",
+            "request": "launch",
+            "mainClass": "Threadt.LockTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - dielock",
+            "request": "launch",
+            "mainClass": "Threadt.dielock",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - sellticket",
+            "request": "launch",
+            "mainClass": "Threadt.sellticket",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - windwst",
+            "request": "launch",
+            "mainClass": "Threadt.windwst",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadTest1",
+            "request": "launch",
+            "mainClass": "Threadt.ThreadTest1",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - windowsTest",
+            "request": "launch",
+            "mainClass": "Threadt.windowsTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadDemo",
+            "request": "launch",
+            "mainClass": "Threadt.ThreadDemo",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadTest",
+            "request": "launch",
+            "mainClass": "Threadt.ThreadTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TeamView",
             "request": "launch",
             "mainClass": "test.project3.TeamView",
