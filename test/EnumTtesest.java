@@ -32,7 +32,7 @@ public enum EnumTtesest {
     public static String getClassname(int index) {
         for (EnumTtesest c : EnumTtesest.values()) {  
             if (c.getIndex() == index) {  
-                return c.name();  
+                return c.name(inst);  
             }  
         }
         return null;

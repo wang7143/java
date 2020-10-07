@@ -2,6 +2,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - test",
+            "request": "launch",
+            "mainClass": "enums.test",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test",
+            "request": "launch",
+            "mainClass": "usefull_class.String_class.test",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - tpool",
+            "request": "launch",
+            "mainClass": "Threadt.thread_pool.tpool",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadNew1",
+            "request": "launch",
+            "mainClass": "Threadt.threadnew.ThreadNew1",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ProducerTest",
+            "request": "launch",
+            "mainClass": "Threadt.product.ProducerTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test1",
+            "request": "launch",
+            "mainClass": "Threadt.threadcommunication.test1",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AccountTest",
+            "request": "launch",
+            "mainClass": "Threadt.acount.AccountTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - LockTest",
             "request": "launch",
             "mainClass": "Threadt.LockTest",

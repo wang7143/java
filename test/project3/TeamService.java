@@ -47,10 +47,17 @@ public class TeamService {
 
 
         Programmer p = (Programmer)e;
-        if(p.getStatus().getNAME().equals("BUSY")){
-            throw new TeamException("已经是某团对成员");
-        }else if("VOCATION".equals(p.getStatus().getNAME())){
-            throw new TeamException("人在度假，无法添加");
+        // if(p.getStatus().getNAME().equals("BUSY")){
+        //     throw new TeamException("已经是某团对成员");
+        // }else if("VOCATION".equals(p.getStatus().getNAME())){
+        //     throw new TeamException("人在度假，无法添加");
+        // }
+
+        switch (p.getStatus()) {
+            case FREE:
+                throw new TeamException("该员工已经是某团队成员");
+            case VOCATION:
+            throw new TeamException("改成员正在休假，无法添加");
         }
 
         int numOfArch = 0,numofDes = 0, numofPro = 0;
