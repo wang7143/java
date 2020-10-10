@@ -20,8 +20,9 @@ import java.util.Scanner;
 class Solution {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        @SuppressWarnings("unused")
         Node l1 = createNode(in);
-        // System.out.println();
+        @SuppressWarnings("unused")
         Node l2 = createNode(in);
         in.close();
     }

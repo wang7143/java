@@ -26,7 +26,6 @@ class number implements Runnable {
     Object foo = new Object();
     @Override
     public void run() {
-        // TODO Auto-generated method stub
         while (true) {
             synchronized (this) {
                 notify();  //唤醒被wait() 的线程，多个wait()唤醒最先被wait()
@@ -34,7 +33,6 @@ class number implements Runnable {
                     try {
                         Thread.sleep(10);
                     } catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
                     System.out.println(Thread.currentThread().getName() + ":" + number);
@@ -43,7 +41,6 @@ class number implements Runnable {
                     try {
                         wait();//当前线程进入阻塞状态，释放同步监视器
                     } catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
                 }

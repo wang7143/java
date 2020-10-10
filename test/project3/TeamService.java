@@ -57,7 +57,11 @@ public class TeamService {
             case FREE:
                 throw new TeamException("该员工已经是某团队成员");
             case VOCATION:
-            throw new TeamException("改成员正在休假，无法添加");
+                throw new TeamException("改成员正在休假，无法添加");
+            case BUSY:
+                break;
+            default:
+                break;
         }
 
         int numOfArch = 0,numofDes = 0, numofPro = 0;
