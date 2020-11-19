@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - PropertiesTest",
+            "request": "launch",
+            "mainClass": "map.PropertiesTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - lettest",
             "request": "launch",
             "mainClass": "test.lettest",
