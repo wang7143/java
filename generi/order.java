@@ -22,9 +22,4 @@ public class order<T> {
     public void setOrderT(T orderT) {
         this.orderT = orderT;
     };
-
-    
-    
-    
-
 }
