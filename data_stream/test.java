@@ -119,12 +119,18 @@ public class test {
 
         rand.seek(3);
 
-        StringBuilder buf = new StringBuilder();
+        StringBuilder buf = new StringBuilder((int) new File("/home/ubuntu/java/data_stream/aa.txt").length());
         byte[] buffer = new byte[20];
         int len;
-        while ((len = rand.read(buf)) != -1) {
-             
+        while ((len = rand.read(buffer)) != -1) {
+             buf.append(new String(buffer,0,len));
         }
-        
+
+        rand.seek(3);
+        rand.write("xyz".getBytes());
+
+        rand.write(buf.toString().getBytes());
+
+        rand.close();
     }
 }
