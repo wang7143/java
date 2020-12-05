@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-import sun.jvm.hotspot.ci.ciKlass;
+
 
 public class lettest {
     @Test

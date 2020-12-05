@@ -2,16 +2,6 @@
     [
     {
       "metadata": {
-        "id": "7a0110bb-231a-4598-aa1b-0769ea46d28b",
-        "publisherId": "aaron-bond.better-comments",
-        "publisherDisplayName": "aaron-bond"
-      },
-      "name": "better-comments",
-      "publisher": "aaron-bond",
-      "version": "2.1.0"
-    },
-    {
-      "metadata": {
         "id": "f583eafd-aa0d-4ccb-8f44-d1e610389660",
         "publisherId": "CoenraadS.bracket-pair-colorizer",
         "publisherDisplayName": "CoenraadS"

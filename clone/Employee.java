@@ -15,7 +15,7 @@ public class Employee implements Cloneable{
         hireDay = new Date();
     }
 
-    public Employee clone() throws CloneNotSupportedException{
+    public Object clone() throws CloneNotSupportedException {
         // call Object.clone()
         Employee cloned = (Employee) super.clone();
 
