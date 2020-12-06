@@ -2,6 +2,9 @@ package Internet;
 
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -136,6 +139,48 @@ public class addressTest {
             }
         }
         
+    }
+
+
+    @Test
+    public void client1() throws IOException {
+        Socket socket = new Socket(InetAddress.getByName("127.0.0.1"),9090);
+
+        OutputStream output = socket.getOutputStream();
+
+        FileInputStream file = new FileInputStream("/home/ubuntu/java/IO_file/data1.txt");
+
+        byte[] buf = new byte[20];
+        int len;
+        while ((len = file.read(buf)) != -1) {
+            output.write(buf,0,len);
+        }
+
+        file.close();
+        output.close();
+        socket.close();
+    }
+
+    @Test
+    public void server1() throws IOException {
+        ServerSocket s = new ServerSocket(9090);
+        Socket accept = s.accept();
+        InputStream in = accept.getInputStream();
+        FileOutputStream file = new FileOutputStream(new File("/home/ubuntu/java/Internet/da.txt"));
+
+        byte[] buf = new byte[1024];
+        int len;
+        while ((len = in.read(buf)) != -1) {
+            file.write(buf,0,len);
+        }
+
+        OutputStream os = accept.getOutputStream();
+        os.write("nihao".getBytes());
+
+        file.close();
+        in.close();
+        accept.close();
+        s.close();
     }
 }
 

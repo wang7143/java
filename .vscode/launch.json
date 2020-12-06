@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - UDPtest",
+            "request": "launch",
+            "mainClass": "Internet.UDPtest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - clientt",
+            "request": "launch",
+            "mainClass": "Internet.clientt",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - addressTest",
             "request": "launch",
             "mainClass": "Internet.addressTest",
