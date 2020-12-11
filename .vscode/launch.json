@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Dy_proxy",
+            "request": "launch",
+            "mainClass": "Dynamic_proxy.Dy_proxy",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - static_proxy",
+            "request": "launch",
+            "mainClass": "Dynamic_proxy.static_proxy",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CloneTest",
+            "request": "launch",
+            "mainClass": "clone.CloneTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - UDPtest",
             "request": "launch",
             "mainClass": "Internet.UDPtest",

@@ -1,5 +1,6 @@
 package reflection;
 
+
 public class Person {
     
     private String name;
@@ -42,8 +43,10 @@ public class Person {
         System.out.println("this show");
     }
 
-    private Stirng shownation(String a){
+    private String shownation(String a){
         
         return a;
     }
+
+    
 }

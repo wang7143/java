@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 
 import org.junit.Test;
 
-import sun.jvm.hotspot.ui.action.ShowAction;
+
 
 public class test1 {
 
@@ -55,6 +55,27 @@ public class test1 {
         m.setAccessible(true);
         String invoke = (String) m.invoke(p, "zhongguo");
         System.out.println(invoke);
+    }
+
+
+    @Test
+    public void get_Class() throws ClassNotFoundException {
+        //方式1
+        Class<Person> cl = Person.class;
+        //方式2  运行时类的对象。
+        Person pe = new Person();
+        Class cl1 = pe.getClass();
+        // System.out.println(cl1);
+        //方式三
+        Class<?> Name = Class.forName("reflection.Person");
+        System.out.println(Name);
+
+        // System.out.println(cl1 == Name);
+
+        //方式4
+        ClassLoader classLoader = test1.class.getClassLoader();
+        Class<?> loadClass = classLoader.loadClass("reflection.Person");
+        System.out.println(loadClass);
     }
 }
 
