@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - LambdaTest",
+            "request": "launch",
+            "mainClass": "lambda.LambdaTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Dy_proxy",
             "request": "launch",
             "mainClass": "Dynamic_proxy.Dy_proxy",

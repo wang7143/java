@@ -6,6 +6,8 @@ import javax.swing.*;
 
 import javax.swing.Timer;
 
+import org.junit.Test;
+
 
 
 /**
@@ -39,3 +41,5 @@ public class LambdaTest {
         System.exit(0);
     }
 }
+
+
