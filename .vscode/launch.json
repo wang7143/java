@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Java9Test",
+            "request": "launch",
+            "mainClass": "java9.Java9Test",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Java9Test",
+            "request": "launch",
+            "mainClass": "name/java9.Java9Test",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "mo1.src.App",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - LambdaTest",
             "request": "launch",
             "mainClass": "lambda.LambdaTest",

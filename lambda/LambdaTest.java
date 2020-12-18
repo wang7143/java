@@ -2,11 +2,11 @@ package lambda;
 
 import java.util.*;
 
-import javax.swing.*;
+// import javax.swing.*;
 
-import javax.swing.Timer;
+// import javax.swing.Timer;
 
-import org.junit.Test;
+// import org.junit.Test;
 
 
 
@@ -32,13 +32,11 @@ public class LambdaTest {
         //? sort方法接受实现了Comparator<String>的某个类对象。在这个对象上调用compare方法会执行这个lambda表达式体。这些对象和类的管理完全取决与具体实现，比传统的内联类高效，最好把lambda表示看作是一个函数，不是对象，要接受lambda表达式肯做是一个函数，而不是一个队象，另外要就接受lambda表达式可以传递到函数式接口。
         System.out.println(Arrays.toString(planets));
 
-        Timer r = new Timer(1000, event -> System
-        .out.println("The time is " + new Date()));
-        r.start();
+        // Timer r = new Timer(1000, event -> System.out.println("The time is " + new Date()));r.start();
 
-        //keep program running until user selects "OK"
-        JOptionPane.showMessageDialog(null, "quit program?");
-        System.exit(0);
+        // //keep program running until user selects "OK"
+        // JOptionPane.showMessageDialog(null, "quit program?");
+        // System.exit(0);
     }
 }
 
