@@ -2,6 +2,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch in_Test",
+            "request": "launch",
+            "mainClass": "name/jdbc.in_Test",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Launch in_Test",
+            "request": "launch",
+            "mainClass": "jdbc.in_Test",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Launch test1",
+            "request": "launch",
+            "mainClass": "jdbc.test1",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Launch insert",
+            "request": "launch",
+            "mainClass": "jdbc.insert",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
+            "name": "Launch StatementTest",
+            "request": "launch",
+            "mainClass": "jdbc.StatementTest",
+            "projectName": "java_d0bf9549"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Java9Test",
             "request": "launch",
             "mainClass": "java9.Java9Test",

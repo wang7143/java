@@ -48,7 +48,7 @@ public class about_stream {
         arr.add("Tom");
         arr.add("Jerry");
         arr.add("Tim");
-
+        
         Optional<List<String>> of = Optional.ofNullable(arr);
         Stream<List<String>> stream = of.stream();
         stream.flatMap(x -> x.stream()).forEach(System.out::println);

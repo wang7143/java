@@ -74,5 +74,10 @@
             "name": "JavaSE-11",
             "path": "/usr/lib/jvm/java-11-openjdk-amd64/",
           },
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar",
+        "mysql-connector-java-5.1.49/mysql-connector-java-5.1.49-bin.jar"
     ]
 }
