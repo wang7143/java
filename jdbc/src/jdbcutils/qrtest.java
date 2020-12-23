@@ -3,14 +3,13 @@ package jdbcutils;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+
 import java.sql.Statement;
 import java.util.List;
 import java.util.Map;
 
-import com.mysql.cj.protocol.Resultset;
 
-import org.apache.commons.dbutils.DbUtils;
+import org.apache.commons.dbutils.*;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
