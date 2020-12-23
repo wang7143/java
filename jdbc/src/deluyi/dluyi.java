@@ -12,7 +12,7 @@ import com.alibaba.druid.pool.DruidDataSourceFactory;
 import org.apache.commons.dbcp.BasicDataSourceFactory;
 import org.junit.Test;
 
-public class test {
+public class dluyi {
 
     
     public static Connection get() throws Exception {
